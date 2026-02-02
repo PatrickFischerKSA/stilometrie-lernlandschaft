@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Modul 9 – Abschluss & Kompetenznachweis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><strong>Modul 9 – Abschluss</strong></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 9 – Abschluss & Kompetenznachweis</h1>
+
+<h2>9.1 Abschlusstest</h2>
+
+<div class="task">
+  <h3>Frage 9.1 – Ebenentrennung</h3>
+  <p>Welche Aussage ist eine fachliche Interpretation?</p>
+
+  <label><input type="radio" name="task9_1" value="A"> A) Es wurden 500 MFW verwendet</label><br>
+  <label><input type="radio" name="task9_1" value="B"> B) Cosine Delta wurde berechnet</label><br>
+  <label><input type="radio" name="task9_1" value="C"> C) Die Texte sind stilistisch ähnlich</label><br>
+  <label><input type="radio" name="task9_1" value="D"> D) Der Algorithmus erkennt Autorschaft</label><br>
+
+  <button onclick="checkMC('task9_1', ['C'])">Antwort prüfen</button>
+  <div id="task9_1-feedback" class="feedback"></div>
+</div>
+
+<div class="task">
+  <h3>Frage 9.2 – Validität</h3>
+  <p>Warum ist ein stilometrisches Ergebnis nie selbsterklärend?</p>
+
+  <textarea id="task9_2-input" placeholder="Ihre Begründung ..."></textarea>
+  <button onclick="checkText('task9_2', ['modell','feature','korpus','interpretation'])">
+    Antwort prüfen
+  </button>
+  <div id="task9_2-feedback" class="feedback"></div>
+</div>
+
+<h2>9.2 Mini-Projekt (Pflicht)</h2>
+
+<div class="task">
+  <h3>Projektauftrag</h3>
+  <p>
+    Entwickeln Sie eine stilometrische Fragestellung und beantworten Sie sie reflektiert.
+  </p>
+
+  <textarea id="task9_3-input" placeholder="Fragestellung, Textauswahl, Features, Tool, Ergebnis, Kritik ..."></textarea>
+  <button onclick="markCompleted('task9_3')">
+    Als bearbeitet markieren
+  </button>
+  <div id="task9_3-feedback" class="feedback">
+    (Keine automatische Bewertung – qualitative Reflexion erforderlich.)
+  </div>
+</div>
+
+<h2>9.3 Selbstreflexion</h2>
+
+<div class="task">
+  <h3>Reflexionsfrage</h3>
+  <p>
+    Wo würden Sie Stilometrie einsetzen – und wo bewusst nicht?
+  </p>
+
+  <textarea id="task9_4-input" placeholder="Ihre Reflexion ..."></textarea>
+  <button onclick="markCompleted('task9_4')">
+    Als bearbeitet markieren
+  </button>
+  <div id="task9_4-feedback" class="feedback">
+    (Keine automatische Bewertung – Fokus auf Methodenmündigkeit.)
+  </div>
+</div>
+
+<div id="progress"></div>
+
+</main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
