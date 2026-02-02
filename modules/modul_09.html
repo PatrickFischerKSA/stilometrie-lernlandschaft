@@ -1,1 +1,37 @@
-<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Modul 9</title><link rel='stylesheet' href='../assets/css/style.css'></head><body><main id='content'><h1>Modul 9</h1></main><script src='../assets/js/app.js'></script></body></html>
+<!DOCTYPE html>
+<html lang='de'>
+<head>
+<meta charset='UTF-8'>
+<title>Modul 9</title>
+<link rel='stylesheet' href='../assets/css/style.css'>
+</head>
+<body>
+<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><strong>Modul 9</strong></li></ul></nav>
+<main id='content'>
+
+<h1>Modul 9 – Abschluss</h1>
+<div class='task'>
+<h3>Frage 9.1 – Ebenentrennung (MC)</h3>
+<label><input type='radio' name='task9_1' value='A'> A) technische Aussage</label><br>
+<label><input type='radio' name='task9_1' value='B'> B) moralische Aussage</label><br>
+<button onclick="checkMC('task9_1',['A'])">Antwort prüfen</button>
+<div id='task9_1-feedback' class='feedback'
+ data-correct='Korrekt: Es ist eine technische Aussage.'
+ data-incorrect='Nicht korrekt: Es geht um Methodik, nicht Moral.'></div>
+</div>
+
+<div class='task'>
+<h3>Frage 9.2 – Reflexion (Freitext)</h3>
+<textarea id='task9_2-input'></textarea>
+<button onclick="checkText('task9_2',['modell','parameter','interpretation'])">Antwort prüfen</button>
+<div id='task9_2-feedback' class='feedback'
+ data-correct='Sehr gut: Du reflektierst Modell, Parameter und Interpretation.'
+ data-partial='Ansatz: Ergänze fehlende Begriffe.'
+ data-incorrect='Zu allgemein: Nutze die geforderten Begriffe.'></div>
+</div>
+
+<div id='progress'></div>
+</main>
+<script src='../assets/js/app.js'></script>
+</body>
+</html>

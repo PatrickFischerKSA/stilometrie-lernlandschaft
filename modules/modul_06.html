@@ -1,1 +1,46 @@
-<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Modul 6</title><link rel='stylesheet' href='../assets/css/style.css'></head><body><main id='content'><h1>Modul 6</h1></main><script src='../assets/js/app.js'></script></body></html>
+<!DOCTYPE html>
+<html lang='de'>
+<head>
+<meta charset='UTF-8'>
+<title>Modul 6</title>
+<link rel='stylesheet' href='../assets/css/style.css'>
+</head>
+<body>
+<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><strong>Modul 6</strong></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
+<main id='content'>
+
+<h1>Modul 6 – Tools und Routinen</h1>
+<p>Online-Tools operationalisieren stilometrische Routinen.</p>
+<ul>
+<li>Voyant (Exploration)</li>
+<li>stylo (R-Paket)</li>
+<li>forTEXT-Routinen</li>
+</ul>
+
+<div class='task'>
+<h3>Aufgabe 6.1 – Tool-Zweck (MC)</h3>
+<label><input type='radio' name='task6_1' value='A'> A) Voyant ist primär zur Visualisierung von Wortfrequenzen</label><br>
+<label><input type='radio' name='task6_1' value='B'> B) Voyant beweist Autorschaft</label><br>
+<button onclick="checkMC('task6_1',['A'])">Antwort prüfen</button>
+<div id='task6_1-feedback' class='feedback'
+ data-correct='Korrekt: Voyant ist ein Explorations-/Visualisierungstool.'
+ data-incorrect='Nicht korrekt: Voyant ist kein Beweiswerkzeug.'
+ data-none='Bitte wähle eine Option.'></div>
+</div>
+
+<div class='task'>
+<h3>Aufgabe 6.2 – Routinen (Freitext)</h3>
+<p>Welche Routine (Tokenisierung, Normalisierung, Featurewahl) ist zuerst nötig?</p>
+<textarea id='task6_2-input'></textarea>
+<button onclick="checkText('task6_2',['tokenisierung'])">Antwort prüfen</button>
+<div id='task6_2-feedback' class='feedback'
+ data-correct='Sehr gut: Tokenisierung ist der erste Schritt.'
+ data-partial='Ansatz: Benenne die richtige Routine explizit.'
+ data-incorrect='Zu allgemein: Nenne die korrekte erste Routine.'></div>
+</div>
+
+<div id='progress'></div>
+</main>
+<script src='../assets/js/app.js'></script>
+</body>
+</html>

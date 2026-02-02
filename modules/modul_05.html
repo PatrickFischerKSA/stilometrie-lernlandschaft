@@ -1,138 +1,16 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang='de'>
 <head>
-  <meta charset="UTF-8">
-  <title>Modul 5 – Historische Texte</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/style.css">
+<meta charset='UTF-8'>
+<title>Modul 5</title>
+<link rel='stylesheet' href='../assets/css/style.css'>
 </head>
 <body>
-
-<nav id="sidebar">
-  <h2>Stilometrie</h2>
-  <ul>
-    <li><a href="../index.html">Start</a></li>
-    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
-    <li><a href="modul_02.html">Modul 2 – Features</a></li>
-    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
-    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
-    <li><strong>Modul 5 – Historische Texte</strong></li>
-    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
-    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
-    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
-    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
-  </ul>
-</nav>
-
-<main id="content">
-
-<h1>Modul 5 – Historische Texte: Normalisierung, Edition, Robustheit</h1>
-
-<p>
-Historische Korpora sind stilometrisch anspruchsvoll: Orthographie schwankt, Editionen greifen ein,
-und Überlieferungslagen sind heterogen. Ohne bewusste Entscheidungen misst Stilometrie häufig
-<strong>editorische Artefakte</strong> statt Stil.
-</p>
-
-<div class="warning-box">
-  <strong>Grundproblem:</strong> Orthographievariation erzeugt künstliche Distanz – selbst bei gleicher Autorschaft.
-</div>
-
-<h2>5.1 Typische Herausforderungen</h2>
-<ul>
-  <li><strong>Orthographie:</strong> Varianten (u/v, i/j, Zusammenschreibung, Interpunktion)</li>
-  <li><strong>Editionspraxis:</strong> Modernisierung, Vereinheitlichung, stille Eingriffe</li>
-  <li><strong>Segmentierung:</strong> Kapitel/Absätze können ungleich lang sein</li>
-  <li><strong>OCR/Transkription:</strong> Fehler können Features massiv verzerren</li>
-</ul>
-
-<h2>5.2 Normalisierung als theoretische Entscheidung</h2>
-<ul>
-  <li><strong>orthographische Normalisierung:</strong> Varianten angleichen</li>
-  <li><strong>Token-Normalisierung:</strong> z. B. Kleinschreibung</li>
-  <li><strong>Lemmatisierung:</strong> (umstritten: verliert Flexionssignale)</li>
-  <li><strong>Zeichen-n-Gramme:</strong> können robuster sein, aber interpretativ schwieriger</li>
-</ul>
-
-<div class="critical-box">
-  <strong>Merksatz:</strong> Normalisierung verändert, <em>was überhaupt als Stil erscheint</em>.
-</div>
-
-<hr>
-
-<h2>5.3 Ressourcen</h2>
-<ul>
-  <li><a href="https://fortext.net/routinen/methoden/stilometrie" target="_blank" rel="noopener">forTEXT: Stilometrie</a></li>
-  <li><a href="../assets/docs/Ein_Delta-Raetsel_Dimpel_2017.pdf" target="_blank" rel="noopener">Dimpel: Ein Delta-Rätsel (PDF)</a></li>
-  <li><a href="../assets/docs/Digitale_Methoden_Mediaevistik.pdf" target="_blank" rel="noopener">Digitale Methoden (Mediävistik) (PDF)</a></li>
-</ul>
-
-<hr>
-
-<h2>5.4 Übungen</h2>
-
-<div class="task">
-  <h3>Aufgabe 5.1 – Warum Normalisierung? (Freitext)</h3>
-  <p>
-    Erkläre in 3–5 Sätzen, warum Normalisierung in historischen Korpora häufig nötig ist.
-    Verwende: <em>Orthographie</em>, <em>Vergleich</em>, <em>Verzerrung</em>.
-  </p>
-  <textarea id="task5_1-input" placeholder="Deine Erklärung ..."></textarea>
-  <button onclick="checkText('task5_1',['orthographie','vergleich','verzerr'])">Antwort prüfen</button>
-  <div id="task5_1-feedback" class="feedback"
-       data-correct="Korrekt: Du erklärst, wie Orthographievariation Vergleich/Distanz verzerrt und Normalisierung stabilisiert."
-       data-partial="Ansatz: Ergänze Orthographie/Verzerrung explizit oder konkreter."
-       data-incorrect="Zu allgemein: Nenne Orthographievariation als Quelle künstlicher Distanz und erkläre Vergleichseffekt."></div>
-</div>
-
-<div class="task">
-  <h3>Aufgabe 5.2 – Risiko der Normalisierung (MC)</h3>
-  <p>Welche Risiken hat Normalisierung? (Wähle alle zutreffenden.)</p>
-
-  <label><input type="checkbox" name="task5_2" value="A"> A) Verlust historischer Signale</label><br>
-  <label><input type="checkbox" name="task5_2" value="B"> B) Einführung editorischer Bias</label><br>
-  <label><input type="checkbox" name="task5_2" value="C"> C) Ergebnisse werden automatisch „objektiv“</label><br>
-  <label><input type="checkbox" name="task5_2" value="D"> D) Vergleichbarkeit kann steigen</label><br>
-
-  <button onclick="checkMC('task5_2',['A','B','D'])">Antwort prüfen</button>
-  <div id="task5_2-feedback" class="feedback"
-       data-correct="Korrekt: Normalisierung kann Vergleichbarkeit erhöhen, aber auch Signale verlieren und Bias einführen."
-       data-partial="Teilweise: Prüfe insbesondere C (Objektivität ist kein Automatismus)."
-       data-incorrect="Nicht korrekt: Überlege, dass Normalisierung sowohl Nutzen (D) als auch Risiken (A/B) hat."></div>
-</div>
-
-<div class="task">
-  <h3>Aufgabe 5.3 – Dimpel-Transfer (Fallanalyse)</h3>
-  <p>
-    Lies in <a href="../assets/docs/Ein_Delta-Raetsel_Dimpel_2017.pdf" target="_blank" rel="noopener">„Ein Delta-Rätsel“</a> den Kernbefund:
-    Normalisierung kann die Distanzräume verändern. Formuliere eine kurze Schlussfolgerung (2–4 Sätze)
-    für die Unterrichts- oder Forschungspraxis. Verwende: <em>Entscheidung</em>, <em>Validität</em>, <em>Transparenz</em>.
-  </p>
-  <textarea id="task5_3-input" placeholder="Deine Schlussfolgerung ..."></textarea>
-  <button onclick="checkText('task5_3',['entscheidung','validität','transparenz'])">Antwort prüfen</button>
-  <div id="task5_3-feedback" class="feedback"
-       data-correct="Sehr gut: Du leitest aus Dimpel eine Validitäts-/Transparenzpflicht für Normalisierungsentscheidungen ab."
-       data-partial="Ansatz: Ergänze explizit Validität/Transparenz als Konsequenzen."
-       data-incorrect="Zu vage: Formuliere klar, dass Normalisierung eine theoretische Entscheidung ist, die dokumentiert werden muss."></div>
-</div>
-
-<div class="task">
-  <h3>Aufgabe 5.4 – Robustheitsstrategie (Plan)</h3>
-  <p>
-    Skizziere eine Robustheitsstrategie für historische Texte: Was würdest du <strong>mindestens</strong> dokumentieren,
-    um Ergebnisse nachvollziehbar zu machen? Nenne 4 Punkte. Verwende: <em>Edition</em>, <em>OCR</em> oder <em>Transkription</em>, <em>Normalisierung</em>, <em>Parameter</em>.
-  </p>
-  <textarea id="task5_4-input" placeholder="Punkt 1 ... Punkt 2 ... Punkt 3 ... Punkt 4 ..."></textarea>
-  <button onclick="checkText('task5_4',['edition','ocr','normalisierung','parameter'])">Antwort prüfen</button>
-  <div id="task5_4-feedback" class="feedback"
-       data-correct="Korrekt: Du nennst zentrale Dokumentationspunkte (Edition/OCR/Normalisierung/Parameter)."
-       data-partial="Teilweise: Ergänze mindestens einen Punkt zu Edition/OCR und einen zu Parametern."
-       data-incorrect="Zu allgemein: Liste konkrete, überprüfbare Dokumentationspunkte."></div>
-</div>
-
-  <div id="progress"></div>
+<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><strong>Modul 5</strong></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
+<main id='content'>
+<h1>Modul 5</h1><p>Vertiefte Version in separatem ZIP.</p>
+<div id='progress'></div>
 </main>
-
-<script src="../assets/js/app.js"></script>
+<script src='../assets/js/app.js'></script>
 </body>
 </html>
