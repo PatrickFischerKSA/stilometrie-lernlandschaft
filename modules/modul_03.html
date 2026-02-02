@@ -1,16 +1,137 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 3</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 3 – Delta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><strong>Modul 3</strong></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
-<main id='content'>
-<h1>Modul 3</h1><p>Vertiefte Version in separatem ZIP.</p>
-<div id='progress'></div>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><strong>Modul 3 – Delta</strong></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 3 – Distanzmasse und Delta</h1>
+
+<p>
+Stilometrie benötigt eine formale Definition von „Ähnlichkeit“. Distanzmasse übersetzen Feature-Unterschiede
+in eine Zahl oder Struktur (z. B. Dendrogramm). <strong>Delta</strong> ist eines der klassischen Distanzmasse der Stilometrie.
+</p>
+
+<div class="info-box">
+  <strong>Merksatz:</strong> Distanzmasse messen Unterschiede zwischen Feature-Profilen – nicht „Autorschaft“.
+</div>
+
+<h2>3.1 Burrows’ Delta (Prinzip)</h2>
+<ul>
+  <li>arbeitet häufig mit <strong>Most Frequent Words (MFW)</strong></li>
+  <li>standardisiert Frequenzen (Z-Werte) → macht Texte vergleichbarer</li>
+  <li>berechnet dann eine Distanz zwischen den Profilen</li>
+</ul>
+
+<h2>3.2 Warum Parameter entscheidend sind</h2>
+<ul>
+  <li><strong>Anzahl MFW:</strong> 100 vs. 1000 kann das Ergebnis stark verändern</li>
+  <li><strong>Textlänge:</strong> kurze Texte sind instabil</li>
+  <li><strong>Vorverarbeitung:</strong> Normalisierung / Tokenisierung</li>
+  <li><strong>Korpusdesign:</strong> Genre, Zeit, Übersetzung, Edition</li>
+</ul>
+
+<div class="warning-box">
+  <strong>Typischer Fehler:</strong> Parameter so lange ändern, bis „das gewünschte Ergebnis“ erscheint.
+  Das ist methodisch unzulässig.
+</div>
+
+<hr>
+
+<h2>3.3 Ressourcen</h2>
+<ul>
+  <li><a href="https://fortext.net/routinen/methoden/stilometrie" target="_blank" rel="noopener">forTEXT: Stilometrie</a></li>
+  <li><a href="../assets/docs/Delta_in_der_stilometrischen_Autorschaftsattribution_2016.pdf" target="_blank" rel="noopener">Delta in der stilometrischen Autorschaftsattribution (2016) (PDF)</a></li>
+  <li><a href="../assets/docs/Quantitative_Ansaetze_Literaturwissenschaft_2017.pdf" target="_blank" rel="noopener">Quantitative Ansätze (PDF)</a></li>
+</ul>
+
+<hr>
+
+<h2>3.4 Übungen</h2>
+
+<div class="task">
+  <h3>Aufgabe 3.1 – Delta interpretieren (Freitext)</h3>
+  <p>
+    Erkläre in 2–4 Sätzen: Was bedeutet ein „kleines Delta“ zwischen Text A und Text B?
+    Verwende <em>ähnlich</em>, <em>Feature</em>, <em>Distanz</em>.
+  </p>
+  <textarea id="task3_1-input" placeholder="Deine Erklärung ..."></textarea>
+  <button onclick="checkText('task3_1',['ähnlich','feature','distanz'])">Antwort prüfen</button>
+  <div id="task3_1-feedback" class="feedback"
+       data-correct="Korrekt: Du deutest Delta als geringe Distanz zwischen Feature-Profilen (Ähnlichkeit)."
+       data-partial="Teilweise: Ergänze Distanz/Feature explizit."
+       data-incorrect="Zu vage: Delta ist ein Distanzmass zwischen Feature-Profilen, nicht zwischen Autoren."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 3.2 – Parameterwirkung (MC)</h3>
+  <p>Welche Faktoren können Delta-Ergebnisse stark beeinflussen? (Wähle alle zutreffenden.)</p>
+
+  <label><input type="checkbox" name="task3_2" value="A"> A) Anzahl MFW</label><br>
+  <label><input type="checkbox" name="task3_2" value="B"> B) Textlänge</label><br>
+  <label><input type="checkbox" name="task3_2" value="C"> C) Distanzdefinition</label><br>
+  <label><input type="checkbox" name="task3_2" value="D"> D) Vorverarbeitung / Normalisierung</label><br>
+  <label><input type="checkbox" name="task3_2" value="E"> E) „Objektivität“ des Computers (unabhängig von Annahmen)</label><br>
+
+  <button onclick="checkMC('task3_2',['A','B','C','D'])">Antwort prüfen</button>
+  <div id="task3_2-feedback" class="feedback"
+       data-correct="Korrekt: Parameter, Vorverarbeitung und Distanzdefinition prägen den Ergebnisraum."
+       data-partial="Teilweise: Mindestens ein Faktor fehlt oder E wurde fälschlich gewählt."
+       data-incorrect="Nicht korrekt: Prüfe, welche Entscheidungen in die Distanzberechnung eingehen."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 3.3 – Methodische Sauberkeit (Kurzurteil)</h3>
+  <p>
+    Eine Person testet 20 Parameterkombinationen und berichtet nur diejenige, die die erwartete Autorschaft stützt.
+    Ist das methodisch zulässig? Begründe mit den Begriffen <em>Validität</em>, <em>Transparenz</em>, <em>Parameter</em>.
+  </p>
+  <textarea id="task3_3-input" placeholder="Dein Urteil ..."></textarea>
+  <button onclick="checkText('task3_3',['validität','transparenz','parameter'])">Antwort prüfen</button>
+  <div id="task3_3-feedback" class="feedback"
+       data-correct="Korrekt: Du kritisierst selektives Reporting (Validität/Transparenz/Parameter)."
+       data-partial="Teilweise: Urteil stimmt, aber begründe expliziter mit den geforderten Begriffen."
+       data-incorrect="Nicht korrekt: Begründe, warum selektive Parameterwahl Ergebnisse verzerren kann."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 3.4 – Transfer zu stylo (ohne Code)</h3>
+  <p>
+    Notiere zwei Parameter, die du in <em>stylo</em> explizit festhalten musst, um Ergebnisse reproduzierbar zu machen.
+    Verwende: <em>MFW</em>, <em>Distanzmass</em> oder <em>Normalisierung</em>.
+  </p>
+  <textarea id="task3_4-input" placeholder="Parameter 1 ... Parameter 2 ..."></textarea>
+  <button onclick="checkText('task3_4',['mfw','distanz','normalisierung'])">Antwort prüfen</button>
+  <div id="task3_4-feedback" class="feedback"
+       data-correct="Sehr gut: Du nennst zentrale Stellschrauben für Reproduzierbarkeit."
+       data-partial="Ansatz: Nenne explizit MFW und mindestens eine weitere Stellschraube."
+       data-incorrect="Zu allgemein: Liste konkrete Parameter (MFW-Anzahl, Distanzmass, Vorverarbeitung)."></div>
+</div>
+
+  <div id="progress"></div>
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>

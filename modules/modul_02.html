@@ -1,16 +1,140 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 2</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 2 – Features</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><strong>Modul 2</strong></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
-<main id='content'>
-<h1>Modul 2</h1><p>Vertiefte Version in separatem ZIP.</p>
-<div id='progress'></div>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><strong>Modul 2 – Features</strong></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 2 – Features: Was wird gemessen?</h1>
+
+<p>
+Stilometrie hängt entscheidend davon ab, <strong>welche Features</strong> du misst.
+Ein Feature ist eine messbare Texteigenschaft, die du als Stellvertreter für „Stil“ verwendest.
+</p>
+
+<div class="warning-box">
+  <strong>Kernregel:</strong> Ein Feature ist nie „neutral“.
+  Es macht bestimmte Signale sichtbar und andere unsichtbar.
+</div>
+
+<h2>2.1 Feature-Typen (systematisch)</h2>
+<ul>
+  <li><strong>Lexikalisch:</strong> Wortfrequenzen, häufigste Wörter (MFW), Type-Token-Ratio (vorsichtig!)</li>
+  <li><strong>Funktional:</strong> Funktionswörter, Partikeln, Konnektoren</li>
+  <li><strong>Zeichen-/Format:</strong> Interpunktion, Anführungszeichen, Gedankenstriche (stark editorisch)</li>
+  <li><strong>Satz-/Rhythmus:</strong> Satzlängen, Varianz, Absatzlängen</li>
+  <li><strong>N-Gramme:</strong> Zeichen- oder Wort-n-Gramme (robust gegen Orthographie, aber interpretativ anspruchsvoll)</li>
+  <li><strong>Grammatik/POS:</strong> Wortartenfolgen (requires Tagging → Vorverarbeitung wird wichtig)</li>
+</ul>
+
+<h2>2.2 Tokenisierung & Vorverarbeitung (warum das nicht „nur Technik“ ist)</h2>
+<ul>
+  <li><strong>Tokenisierung:</strong> Was zählt als „Wort“? (z. B. „KI-“ vs. „KI“)</li>
+  <li><strong>Normalisierung:</strong> Gross-/Kleinschreibung, Varianten, historische Orthographie</li>
+  <li><strong>Stopwörter:</strong> Entfernen? (Achtung: Funktionswörter sind oft gerade das Stil-Signal!)</li>
+</ul>
+
+<div class="critical-box">
+  <strong>Warnung:</strong> Wer Funktionswörter entfernt, entfernt oft das stabilste Autorsignal.
+</div>
+
+<hr>
+
+<h2>2.3 Ressourcen</h2>
+<ul>
+  <li><a href="https://fortext.net/routinen/methoden/stilometrie" target="_blank" rel="noopener">forTEXT: Stilometrie (Überblick)</a></li>
+  <li><a href="../assets/docs/Quantitative_Ansaetze_Literaturwissenschaft_2017.pdf" target="_blank" rel="noopener">Quantitative Ansätze (PDF)</a></li>
+  <li><a href="../assets/docs/Digitale_Literaturwissenschaft_Jannidis_2022.pdf" target="_blank" rel="noopener">Digitale Literaturwissenschaft (Jannidis) (PDF)</a></li>
+</ul>
+
+<hr>
+
+<h2>2.4 Übungen mit Sofortkorrektur</h2>
+
+<div class="task">
+  <h3>Aufgabe 2.1 – Feature oder Inhalt?</h3>
+  <p>Markiere die beiden Optionen, die typische stilometrische Features sind.</p>
+
+  <label><input type="checkbox" name="task2_1" value="A"> A) Funktionswörter (und, aber, dass)</label><br>
+  <label><input type="checkbox" name="task2_1" value="B"> B) Thema/Handlungsort (z. B. „Paris“, „Krieg“)</label><br>
+  <label><input type="checkbox" name="task2_1" value="C"> C) Satzlänge / Varianz</label><br>
+  <label><input type="checkbox" name="task2_1" value="D"> D) Moralische Botschaft</label><br>
+
+  <button onclick="checkMC('task2_1',['A','C'])">Antwort prüfen</button>
+  <div id="task2_1-feedback" class="feedback"
+       data-correct="Korrekt: Funktionswörter und Satzlängen sind klassische, vergleichbare Stil-Features."
+       data-partial="Teilweise: Du hast mindestens ein Feature erkannt. Entferne inhaltliche Kategorien."
+       data-incorrect="Nicht korrekt: Du wählst Inhalte statt messbarer Formmerkmale."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 2.2 – Feature-Design (Begründung)</h3>
+  <p>
+    Du willst <strong>Genre-Effekte</strong> reduzieren und eher Autorsignale sichtbar machen.
+    Welche zwei Feature-Typen sind dafür besonders geeignet – und warum?
+    Verwende die Begriffe <em>Funktionswörter</em>, <em>MFW</em>, <em>Signal</em>, <em>Genre</em>.
+  </p>
+  <textarea id="task2_2-input" placeholder="Deine Begründung ..."></textarea>
+  <button onclick="checkText('task2_2',['funktionswörter','mfw','signal','genre'])">Antwort prüfen</button>
+  <div id="task2_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du begründest Featurewahl als Signalentscheidung (Genre vs. Autor)."
+       data-partial="Ansatz erkennbar: Ergänze die fehlenden Signal-/Featurebegriffe."
+       data-incorrect="Zu allgemein: Begründe explizit, welche Features welches Signal verstärken oder dämpfen."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 2.3 – Vorverarbeitung: Stopwörter</h3>
+  <p>
+    Viele Tools bieten an, Stopwörter zu entfernen. Erkläre, warum das in der Stilometrie häufig
+    eine schlechte Idee ist (2–4 Sätze).
+  </p>
+  <textarea id="task2_3-input" placeholder="Deine Erklärung ..."></textarea>
+  <button onclick="checkText('task2_3',['funktionswort','signal','entfernen','stabil'])">Antwort prüfen</button>
+  <div id="task2_3-feedback" class="feedback"
+       data-correct="Korrekt: Du erklärst, dass Funktionswörter oft das stabilste Stilsignal tragen."
+       data-partial="Teilweise: Du siehst das Problem, aber benenne Funktionswörter/Signal expliziter."
+       data-incorrect="Nicht korrekt: Begründe methodisch, was durch Stopwort-Entfernung verloren geht."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 2.4 – Mini-Tool-Transfer (Voyant als Feature-Lupe)</h3>
+  <p>
+    Öffne <a href="https://voyant-tools.org" target="_blank" rel="noopener">Voyant</a> und lade zwei Texte.
+    Schreibe hier: (a) drei Funktionswörter, (b) eine Häufigkeitsdifferenz, (c) warum das als Feature taugt.
+    Verwende: <em>Häufigkeit</em>, <em>Vergleich</em>, <em>Feature</em>.
+  </p>
+  <textarea id="task2_4-input" placeholder="(a) ... (b) ... (c) ..."></textarea>
+  <button onclick="checkText('task2_4',['häufig','vergleich','feature'])">Antwort prüfen</button>
+  <div id="task2_4-feedback" class="feedback"
+       data-correct="Sehr gut: Du nutzt Voyant als Feature-Lupe und begründest die Vergleichbarkeit."
+       data-partial="Ansatz: Ergänze die Begründung, warum Häufigkeiten als Feature dienen."
+       data-incorrect="Zu allgemein: Nenne konkrete Funktionswörter/Häufigkeiten und erkläre den Feature-Charakter."></div>
+</div>
+
+  <div id="progress"></div>
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>
