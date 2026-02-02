@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Modul 7 – Interpretation, Validität, Kritik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><strong>Modul 7 – Interpretation</strong></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 7 – Interpretation, Validität, Kritik</h1>
+
+<p>
+  In diesem Modul geht es nicht um neue Techniken, sondern um die Frage:
+  <strong>Wie liest man stilometrische Ergebnisse korrekt?</strong>
+</p>
+
+<div class="info-box">
+  <strong>Leitthese:</strong> Stilometrie produziert Datenräume – nicht Bedeutungen.
+</div>
+
+<h2>7.1 Ebenen der Interpretation</h2>
+
+<ul>
+  <li><strong>Technisch:</strong> Welche Features? Welche Distanz?</li>
+  <li><strong>Methodisch:</strong> Welches Signal ist dominant?</li>
+  <li><strong>Fachlich:</strong> Was lässt sich literaturwissenschaftlich sagen?</li>
+</ul>
+
+<div class="task">
+  <h3>Aufgabe 7.1 – Ebenen trennen</h3>
+  <p>Ordnen Sie zu: technisch / methodisch / fachlich.</p>
+
+  <textarea id="task7_1-input" placeholder="Ihre Zuordnung ..."></textarea>
+  <button onclick="checkText('task7_1', ['technisch','methodisch','fachlich'])">
+    Antwort prüfen
+  </button>
+  <div id="task7_1-feedback" class="feedback"></div>
+</div>
+
+<h2>7.2 Validität</h2>
+
+<ul>
+  <li>Interne Validität: Reproduzierbarkeit</li>
+  <li>Externe Validität: Übertragbarkeit</li>
+  <li>Theoretische Validität: Angemessenheit der Modellannahmen</li>
+</ul>
+
+<div class="task">
+  <h3>Aufgabe 7.2 – Kritikfähigkeit</h3>
+  <p>Welche Aussage ist methodisch zulässig?</p>
+
+  <label><input type="radio" name="task7_2" value="A"> A) Delta beweist Autorschaft</label><br>
+  <label><input type="radio" name="task7_2" value="B"> B) Die Analyse legt stilistische Nähe nahe</label><br>
+  <label><input type="radio" name="task7_2" value="C"> C) Das Tool hat entschieden</label><br>
+  <label><input type="radio" name="task7_2" value="D"> D) Der Algorithmus interpretiert den Text</label><br>
+
+  <button onclick="checkMC('task7_2', ['B'])">Antwort prüfen</button>
+  <div id="task7_2-feedback" class="feedback"></div>
+</div>
+
+<div class="critical-box">
+  Gute stilometrische Forschung erkennt man daran, dass sie ihre eigenen Grenzen sichtbar macht.
+</div>
+
+<div id="progress"></div>
+
+</main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
