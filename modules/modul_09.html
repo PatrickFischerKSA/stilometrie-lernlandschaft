@@ -1,37 +1,176 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 9</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 9 – Abschluss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><strong>Modul 9</strong></li></ul></nav>
-<main id='content'>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools & Routinen</a></li>
+    <li><a href="modul_06_lab.html">Modul 6 – Lab (Voyant + stylo)</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><strong>Modul 9 – Abschluss</strong></li>
+  </ul>
+</nav>
+
+<main id="content">
 
 <h1>Modul 9 – Abschluss</h1>
-<div class='task'>
-<h3>Frage 9.1 – Ebenentrennung (MC)</h3>
-<label><input type='radio' name='task9_1' value='A'> A) technische Aussage</label><br>
-<label><input type='radio' name='task9_1' value='B'> B) moralische Aussage</label><br>
-<button onclick="checkMC('task9_1',['A'])">Antwort prüfen</button>
-<div id='task9_1-feedback' class='feedback'
- data-correct='Korrekt: Es ist eine technische Aussage.'
- data-incorrect='Nicht korrekt: Es geht um Methodik, nicht Moral.'></div>
+
+<div class="warning-box">
+  <strong>Leitsatz:</strong>  
+  <em>Methoden verstehen – Ergebnisse verantworten.</em>
 </div>
 
-<div class='task'>
-<h3>Frage 9.2 – Reflexion (Freitext)</h3>
-<textarea id='task9_2-input'></textarea>
-<button onclick="checkText('task9_2',['modell','parameter','interpretation'])">Antwort prüfen</button>
-<div id='task9_2-feedback' class='feedback'
- data-correct='Sehr gut: Du reflektierst Modell, Parameter und Interpretation.'
- data-partial='Ansatz: Ergänze fehlende Begriffe.'
- data-incorrect='Zu allgemein: Nutze die geforderten Begriffe.'></div>
+<h2>9.0 Worum geht es in diesem Modul?</h2>
+
+<p>
+  Modul 9 bündelt die bisherigen Lernschritte und führt sie in einer kleinen Abschlussreflexion
+  und einem Mini-Projekt zusammen. Ziel ist es, stilometrische Verfahren nicht nur bedienen,
+  sondern kritisch einordnen zu können.
+</p>
+
+<ul>
+  <li>Du wiederholst zentrale Begriffe (Features, Delta, Routinen, Interpretation).</li>
+  <li>Du reflektierst die Grenzen und Möglichkeiten der Methode.</li>
+  <li>Du verbindest technische Ergebnisse mit literaturwissenschaftlicher Deutung.</li>
+</ul>
+
+<div class="info-box">
+  <strong>Merksatz:</strong>  
+  Gute Digital Humanities verbinden Daten, Methode und Kontext.
 </div>
 
-<div id='progress'></div>
+<hr>
+
+<h2>9.1 Zentrale Begriffe (MC)</h2>
+
+<div class="task">
+  <p>Welche Aussage beschreibt Delta am treffendsten?</p>
+
+  <label><input type="radio" name="task9_1" value="A">
+    A) Ein Mass für stilistische Distanz zwischen Texten.
+  </label><br>
+
+  <label><input type="radio" name="task9_1" value="B">
+    B) Ein Tool zur Textgenerierung.
+  </label><br>
+
+  <label><input type="radio" name="task9_1" value="C">
+    C) Eine hermeneutische Interpretationsmethode.
+  </label><br>
+
+  <button onclick="checkMC('task9_1',['A'])">Antwort prüfen</button>
+
+  <div id="task9_1-feedback" class="feedback"
+       data-correct="Korrekt: Delta misst stilistische Distanz zwischen Texten."
+       data-partial="Teilweise richtig – präzisiere den methodischen Charakter."
+       data-incorrect="Nicht korrekt: Delta ist weder ein Generator noch eine Interpretation."
+       data-none="Bitte wähle eine Option."></div>
+</div>
+
+<hr>
+
+<h2>9.2 Selbstreflexion (Freitext)</h2>
+
+<div class="task">
+  <h3>Aufgabe 9.2</h3>
+  <p>
+    Beschreibe in 4–6 Sätzen, was du über Stilometrie gelernt hast und wo du ihre Grenzen siehst.
+    Verwende die Begriffe: <em>Modell</em>, <em>Parameter</em>, <em>Interpretation</em>, <em>Kontext</em>.
+  </p>
+
+  <textarea id="task9_2-input"
+            placeholder="Deine Reflexion ..."></textarea>
+
+  <button onclick="checkText('task9_2',['modell','parameter','interpretation','kontext'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task9_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du reflektierst Methode, Grenzen und Kontext überzeugend."
+       data-partial="Ansatz erkennbar – integriere alle Begriffe klarer."
+       data-incorrect="Zu allgemein – beziehe dich konkreter auf deine Lernerfahrungen."
+       data-none="Bitte schreibe mindestens 4 Sätze."></div>
+</div>
+
+<hr>
+
+<h2>9.3 Mini-Projekt (Transfer)</h2>
+
+<p>
+  Wähle einen kurzen literarischen Text (oder einen von deiner Lehrperson bereitgestellten Auszug)
+  und bearbeite die folgenden Schritte:
+</p>
+
+<ol>
+  <li>Lade den Text in Voyant und notiere 2–3 Beobachtungen.</li>
+  <li>Stelle dir vor, du würdest eine Delta-Analyse in stylo durchführen.</li>
+  <li>Formuliere eine vorsichtige Schlussfolgerung.</li>
+</ol>
+
+<div class="task">
+  <h3>Aufgabe 9.3</h3>
+  <p>
+    Schreibe in 5–8 Sätzen eine zusammenhängende Antwort, die alle drei Schritte verbindet.
+    Verwende: <em>Exploration</em>, <em>Modell</em>, <em>Hinweis</em>, <em>weitere Belege</em>.
+  </p>
+
+  <textarea id="task9_3-input"
+            placeholder="Deine Projektantwort ..."></textarea>
+
+  <button onclick="checkText('task9_3',['exploration','modell','hinweis','belege'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task9_3-feedback" class="feedback"
+       data-correct="Sehr gut: Du verbindest Exploration, Modell und Interpretation schlüssig."
+       data-partial="Ansatz erkennbar – stelle die Verbindungen klarer dar."
+       data-incorrect="Zu unspezifisch – gehe expliziter auf alle Schritte ein."
+       data-none="Bitte schreibe mindestens 5 Sätze."></div>
+</div>
+
+<hr>
+
+<h2>9.4 Abschliessende Positionierung</h2>
+
+<div class="task">
+  <h3>Aufgabe 9.4</h3>
+  <p>
+    Nimm in 3–4 Sätzen Stellung: Sollte Stilometrie im Literaturunterricht eingesetzt werden?
+    Begründe kurz und präzise.
+  </p>
+
+  <textarea id="task9_4-input"
+            placeholder="Deine Stellungnahme ..."></textarea>
+
+  <button onclick="checkText('task9_4',['unterricht','methode'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task9_4-feedback" class="feedback"
+       data-correct="Klare Position mit nachvollziehbarer Begründung."
+       data-partial="Position erkennbar – Argumentation noch schärfen."
+       data-incorrect="Zu vage – beziehe dich deutlicher auf Vor- und Nachteile."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<div id="progress"></div>
+
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>
