@@ -1,231 +1,158 @@
 /* =========================================================
    Stilometrie – Lernlandschaft
    Datei: assets/css/style.css
-   Version: Lieferung 7
+   Version: v2 (Lieferung 11 – Vertiefung 1–5)
    Zweck:
    - klare, ruhige Lernoberfläche
    - Fokus auf Lesbarkeit & Analyse
-   - keine Ablenkung, keine Gamification
+   - barrierearm, ohne Ablenkung
    ========================================================= */
 
-/* -------------------------
-   Grundreset
-   ------------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* -------------------------
-   Basislayout
-   ------------------------- */
-body {
+body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   background-color: #f7f7f7;
-  color: #222;
-  display: flex;
-  min-height: 100vh;
+  color:#222;
+  display:flex;
+  min-height:100vh;
 }
 
-/* -------------------------
-   Sidebar
-   ------------------------- */
-#sidebar {
-  width: 260px;
-  background-color: #1f2933;
-  color: #ffffff;
-  padding: 1.5rem 1rem;
-  flex-shrink: 0;
+#sidebar{
+  width:260px;
+  background-color:#1f2933;
+  color:#fff;
+  padding:1.5rem 1rem;
+  flex-shrink:0;
 }
 
-#sidebar h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
+#sidebar h2{
+  font-size:1.4rem;
+  margin-bottom:1.2rem;
+  font-weight:600;
 }
 
-#sidebar ul {
-  list-style: none;
+#sidebar ul{ list-style:none; }
+#sidebar li{ margin-bottom:0.6rem; }
+
+#sidebar a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:0.95rem;
+  display:block;
+  padding:0.35rem 0.55rem;
+  border-radius:4px;
 }
 
-#sidebar li {
-  margin-bottom: 0.6rem;
+#sidebar a:hover, #sidebar a:focus{
+  background-color:#374151;
+  color:#fff;
 }
 
-#sidebar a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: block;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
+#content{
+  padding:2rem 2.5rem;
+  max-width:980px;
+  width:100%;
 }
 
-#sidebar a:hover,
-#sidebar a:focus {
-  background-color: #374151;
-  color: #ffffff;
+h1{ font-size:2rem; margin-bottom:1.2rem; }
+h2{ font-size:1.4rem; margin:2rem 0 0.8rem; }
+h3{ font-size:1.15rem; margin:1.5rem 0 0.6rem; }
+
+p{ margin-bottom:1rem; }
+ul,ol{ margin-left:1.2rem; margin-bottom:1rem; }
+li{ margin-bottom:0.4rem; }
+
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size:0.95em;
+  background:#eef2f7;
+  padding:0.1rem 0.25rem;
+  border-radius:4px;
 }
 
-/* -------------------------
-   Hauptinhalt
-   ------------------------- */
-#content {
-  padding: 2rem 2.5rem;
-  max-width: 900px;
-  width: 100%;
+a{ color:#1e40af; }
+a:hover{ color:#1d4ed8; }
+
+.info-box{
+  background:#eef2f7;
+  border-left:4px solid #2563eb;
+  padding:1rem;
+  margin:1.5rem 0;
+}
+.warning-box{
+  background:#fff4e5;
+  border-left:4px solid #d97706;
+  padding:1rem;
+  margin:1.5rem 0;
+}
+.critical-box{
+  background:#fdecea;
+  border-left:4px solid #b91c1c;
+  padding:1rem;
+  margin:1.5rem 0;
 }
 
-/* -------------------------
-   Überschriften
-   ------------------------- */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+.task{
+  background:#fff;
+  border:1px solid #d1d5db;
+  padding:1.2rem;
+  margin:1.5rem 0;
+  border-radius:6px;
+}
+.task h3{ margin-top:0; }
+
+textarea, input[type="text"]{
+  width:100%;
+  min-height:90px;
+  padding:0.6rem;
+  font-size:0.95rem;
+  border:1px solid #9ca3af;
+  border-radius:4px;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 0.8rem;
+button{
+  margin-top:0.8rem;
+  padding:0.55rem 1.1rem;
+  font-size:0.92rem;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+button:hover{ background:#1e40af; }
+
+.feedback{
+  margin-top:1rem;
+  padding:0.85rem;
+  border-radius:4px;
+}
+.feedback.correct{ background:#ecfdf5; border:1px solid #10b981; }
+.feedback.partial{ background:#fffbeb; border:1px solid #f59e0b; }
+.feedback.incorrect{ background:#fef2f2; border:1px solid #ef4444; }
+
+.small{
+  font-size:0.92rem;
+  color:#374151;
 }
 
-h3 {
-  font-size: 1.15rem;
-  margin: 1.5rem 0 0.6rem;
+hr{
+  border:none;
+  border-top:1px solid #e5e7eb;
+  margin:1.5rem 0;
 }
 
-/* -------------------------
-   Text & Listen
-   ------------------------- */
-p {
-  margin-bottom: 1rem;
+#progress{
+  margin-top:2rem;
+  font-size:0.92rem;
+  color:#374151;
 }
 
-ul {
-  margin-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-li {
-  margin-bottom: 0.4rem;
-}
-
-/* -------------------------
-   Infoboxen (Didaktik)
-   ------------------------- */
-.info-box {
-  background-color: #eef2f7;
-  border-left: 4px solid #2563eb;
-  padding: 1rem;
-  margin: 1.5rem 0;
-}
-
-.warning-box {
-  background-color: #fff4e5;
-  border-left: 4px solid #d97706;
-  padding: 1rem;
-  margin: 1.5rem 0;
-}
-
-.critical-box {
-  background-color: #fdecea;
-  border-left: 4px solid #b91c1c;
-  padding: 1rem;
-  margin: 1.5rem 0;
-}
-
-/* -------------------------
-   Aufgaben & Fragen
-   ------------------------- */
-.task {
-  background-color: #ffffff;
-  border: 1px solid #d1d5db;
-  padding: 1.2rem;
-  margin: 1.5rem 0;
-  border-radius: 6px;
-}
-
-.task h3 {
-  margin-top: 0;
-}
-
-/* -------------------------
-   Antwortfelder
-   ------------------------- */
-textarea,
-input[type="text"] {
-  width: 100%;
-  min-height: 80px;
-  padding: 0.6rem;
-  font-size: 0.95rem;
-  border: 1px solid #9ca3af;
-  border-radius: 4px;
-}
-
-button {
-  margin-top: 0.8rem;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
-  background-color: #2563eb;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #1e40af;
-}
-
-/* -------------------------
-   Feedbackfelder
-   ------------------------- */
-.feedback {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  border-radius: 4px;
-}
-
-.feedback.correct {
-  background-color: #ecfdf5;
-  border: 1px solid #10b981;
-}
-
-.feedback.partial {
-  background-color: #fffbeb;
-  border: 1px solid #f59e0b;
-}
-
-.feedback.incorrect {
-  background-color: #fef2f2;
-  border: 1px solid #ef4444;
-}
-
-/* -------------------------
-   Fortschrittsanzeige
-   ------------------------- */
-#progress {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #374151;
-}
-
-/* -------------------------
-   Responsiv
-   ------------------------- */
-@media (max-width: 800px) {
-  #sidebar {
-    display: none;
-  }
-
-  body {
-    flex-direction: column;
-  }
-
-  #content {
-    padding: 1.5rem;
-  }
+@media (max-width: 800px){
+  #sidebar{ display:none; }
+  body{ flex-direction:column; }
+  #content{ padding:1.5rem; }
 }
