@@ -1,0 +1,8 @@
+[Text A]
+Der Morgen war klar und kühl. Der Fluss glänzte wie Glas.
+
+[Text B]
+Am Morgen lag Nebel über dem Fluss, doch die Sonne brach bald durch.
+
+[Text C]
+Kühl und klar zeigte sich der Fluss im ersten Licht des Morgens.
