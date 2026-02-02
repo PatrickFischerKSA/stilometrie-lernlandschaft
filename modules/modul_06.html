@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Modul 6 – Werkzeuge & Hands-on</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><strong>Modul 6 – Tools</strong></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 6 – Werkzeuge & Hands-on-Stilometrie</h1>
+
+<p>
+  In diesem Modul arbeiten Sie praktisch mit Tools. Ziel ist <strong>nicht</strong> das
+  perfekte Ergebnis, sondern das Verständnis der Entscheidungen, die jedes Ergebnis
+  mitproduzieren.
+</p>
+
+<div class="info-box">
+  <strong>Prinzip:</strong> Tools sind epistemische Instrumente – keine Antwortmaschinen.
+</div>
+
+<h2>6.1 Tool A1 – Voyant Tools (Einstieg)</h2>
+
+<p>
+  Öffnen Sie: <a href="https://voyant-tools.org" target="_blank" rel="noopener">https://voyant-tools.org</a>
+  und laden Sie zwei kurze Texte (gleiches Genre, verschiedene Autoren).
+</p>
+
+<div class="task">
+  <h3>Aufgabe 6.1 – Feature-Bewusstsein (Voyant)</h3>
+  <p>
+    1) Öffnen Sie <em>Cirrus</em> und <em>Terms</em>.<br>
+    2) Blenden Sie Eigennamen aus.<br>
+    3) Notieren Sie:
+  </p>
+  <ul>
+    <li>drei häufige Funktionswörter</li>
+    <li>eine auffällige Häufigkeitsdifferenz zwischen Text A und B</li>
+  </ul>
+
+  <textarea id="task6_1-input" placeholder="Ihre Beobachtungen ..."></textarea>
+  <button onclick="checkText('task6_1', ['und','aber','dass','häufig','vergleich'])">
+    Antwort prüfen
+  </button>
+  <div id="task6_1-feedback" class="feedback"></div>
+</div>
+
+<h2>6.2 Tool B1 – stylo (R-Package, konzeptionell)</h2>
+
+<p>
+  Standard-Workflow (ohne Code im Browser):
+</p>
+<ol>
+  <li>Korpus definieren</li>
+  <li>Feature-Auswahl (z. B. 100–1000 MFW)</li>
+  <li>Distanzmaß wählen (Delta oder Cosine)</li>
+  <li>Clustering visualisieren</li>
+  <li>Ergebnis methodisch interpretieren</li>
+</ol>
+
+<div class="task">
+  <h3>Aufgabe 6.2 – Parameter-Denken</h3>
+  <p>Welche Entscheidung beeinflusst das Ergebnis am stärksten?</p>
+
+  <label><input type="radio" name="task6_2" value="A"> A) Textlänge</label><br>
+  <label><input type="radio" name="task6_2" value="B"> B) MFW-Anzahl</label><br>
+  <label><input type="radio" name="task6_2" value="C"> C) Distanzmaß</label><br>
+  <label><input type="radio" name="task6_2" value="D"> D) Alle genannten</label><br>
+
+  <button onclick="checkMC('task6_2', ['D'])">Antwort prüfen</button>
+  <div id="task6_2-feedback" class="feedback"></div>
+</div>
+
+<h2>6.3 Dendrogramme lesen</h2>
+
+<div class="task">
+  <h3>Aufgabe 6.3 – Interpretation</h3>
+  <p>
+    In einem Dendrogramm liegen A und B sehr nah, C deutlich entfernt.
+    Welche Aussagen sind zulässig?
+  </p>
+
+  <label><input type="checkbox" name="task6_3" value="A"> A) A und B haben denselben Autor</label><br>
+  <label><input type="checkbox" name="task6_3" value="B"> B) A und B sind stilistisch ähnlich</label><br>
+  <label><input type="checkbox" name="task6_3" value="C"> C) C ist stilistisch verschieden</label><br>
+  <label><input type="checkbox" name="task6_3" value="D"> D) B und C gehören zu verschiedenen Genres</label><br>
+
+  <button onclick="checkMC('task6_3', ['B','C'])">Antwort prüfen</button>
+  <div id="task6_3-feedback" class="feedback"></div>
+</div>
+
+<h2>6.4 Historische Texte (Normalisierung)</h2>
+
+<p>
+  Ohne Normalisierung können orthographische Varianten das Ergebnis verzerren
+  (vgl. <em>Ein Delta-Rätsel</em>).
+</p>
+
+<div class="task">
+  <h3>Aufgabe 6.4 – Vorhersage</h3>
+  <p>
+    Zwei mittelhochdeutsche Texte, gleiche Autorschaft, <strong>nicht</strong> normalisiert.
+    Was erwarten Sie?
+  </p>
+
+  <label><input type="radio" name="task6_4" value="A"> A) klare Nähe</label><br>
+  <label><input type="radio" name="task6_4" value="B"> B) zufällige Streuung</label><br>
+  <label><input type="radio" name="task6_4" value="C"> C) stabile Distanz</label><br>
+  <label><input type="radio" name="task6_4" value="D"> D) Genre-Cluster</label><br>
+
+  <button onclick="checkMC('task6_4', ['B'])">Antwort prüfen</button>
+  <div id="task6_4-feedback" class="feedback"></div>
+</div>
+
+<div id="progress"></div>
+
+</main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
