@@ -1,0 +1,8 @@
+Text_A.txt
+Der Morgen war klar und kühl. Der Fluss glänzte wie Glas.
+
+Text_B.txt
+Am Morgen lag Nebel über dem Fluss, doch die Sonne brach bald durch.
+
+Text_C.txt
+Kühl und klar zeigte sich der Fluss im ersten Licht des Morgens.
