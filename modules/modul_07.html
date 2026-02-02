@@ -1,28 +1,162 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 7</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 7 – Interpretation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><strong>Modul 7</strong></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
-<main id='content'>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools & Routinen</a></li>
+    <li><a href="modul_06_lab.html">Modul 6 – Lab (Voyant + stylo)</a></li>
+    <li><strong>Modul 7 – Interpretation</strong></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
 
 <h1>Modul 7 – Interpretation</h1>
-<p>Datenräume ≠ Bedeutungen.</p>
-<div class='task'>
-<h3>Aufgabe 7.1 – Ebenen (MC)</h3>
-<label><input type='radio' name='task7_1' value='A'> A) technisch</label><br>
-<label><input type='radio' name='task7_1' value='B'> B) poetisch</label><br>
-<button onclick="checkMC('task7_1',['A'])">Antwort prüfen</button>
-<div id='task7_1-feedback' class='feedback'
- data-correct='Korrekt: Die Ebene ist technisch.'
- data-incorrect='Nicht korrekt: Bleibe auf der technischen Ebene.'></div>
+
+<div class="warning-box">
+  <strong>Leitsatz:</strong>  
+  <em>Datenräume ≠ Bedeutungen.</em>
 </div>
 
-<div id='progress'></div>
+<h2>7.0 Worum geht es in diesem Modul?</h2>
+
+<p>
+  Stilometrie erzeugt <strong>technische Relationen</strong> zwischen Texten:
+  Ähnlichkeiten, Distanzen und Cluster.  
+  Diese Relationen sind jedoch <strong>keine Interpretationen</strong> im literaturwissenschaftlichen Sinn.
+</p>
+
+<p>Man muss daher strikt unterscheiden zwischen:</p>
+
+<ul>
+  <li><strong>Technischer Ebene:</strong>  
+      Modelle, Parameter, Routinen, Distanzmasse (z. B. Delta), Visualisierungen.</li>
+  <li><strong>Hermeneutischer Ebene:</strong>  
+      Bedeutungen, Motive, Themen, Stil im interpretativen Sinn, historische Kontexte.</li>
+</ul>
+
+<div class="info-box">
+  <strong>Merksatz:</strong>  
+  Stilometrie kann <em>Hinweise</em> liefern – sie ersetzt keine Interpretation.
+</div>
+
+<hr>
+
+<h2>7.1 Ebenentrennung (MC)</h2>
+
+<div class="task">
+  <p>Auf welcher Ebene bewegt sich eine Aussage wie:</p>
+  <blockquote>
+    „Text A liegt stilometrisch näher bei Text B als bei Text C.“
+  </blockquote>
+
+  <label><input type="radio" name="task7_1" value="A">
+    A) technisch
+  </label><br>
+
+  <label><input type="radio" name="task7_1" value="B">
+    B) poetisch / hermeneutisch
+  </label><br>
+
+  <button onclick="checkMC('task7_1',['A'])">Antwort prüfen</button>
+
+  <div id="task7_1-feedback" class="feedback"
+       data-correct="Korrekt: Das ist eine technische Aussage über Modellresultate."
+       data-partial="Teilweise: Du erkennst die richtige Richtung, bleibe aber strikt auf der technischen Ebene."
+       data-incorrect="Nicht korrekt: Hier geht es nicht um Bedeutung, sondern um Modellrelationen."
+       data-none="Bitte wähle eine Option."></div>
+</div>
+
+<hr>
+
+<h2>7.2 Typische Fehlinterpretationen erkennen</h2>
+
+<p>
+  In der Praxis kommt es häufig zu Kurzschlüssen wie:
+</p>
+
+<ul>
+  <li>„Kleine Delta-Distanz = gleiche Autorin / gleicher Autor.“</li>
+  <li>„Cluster im Dendrogramm beweisen Autorschaft.“</li>
+  <li>„Stilometrie erklärt literarische Bedeutung.“</li>
+</ul>
+
+<div class="task">
+  <h3>Aufgabe 7.2 – Reflexion (Freitext)</h3>
+  <p>
+    Erkläre in 3–4 Sätzen, warum mindestens <strong>eine</strong> dieser Aussagen problematisch ist.
+    Verwende die Begriffe: <em>Modell</em>, <em>Parameter</em>, <em>Interpretation</em>.
+  </p>
+
+  <textarea id="task7_2-input"
+            placeholder="Deine Antwort ..."></textarea>
+
+  <button onclick="checkText('task7_2',['modell','parameter','interpretation'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task7_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du unterscheidest klar zwischen Modell, Parametern und Interpretation."
+       data-partial="Ansatz erkennbar – ergänze die fehlenden Begriffe explizit."
+       data-incorrect="Zu allgemein: Beziehe dich auf Modell, Parameter und Interpretation."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<hr>
+
+<h2>7.3 Transfer: Stilometrie in der Praxis</h2>
+
+<p>
+  Angenommen, eine Delta-Analyse zeigt:
+</p>
+
+<blockquote>
+  „Text X und Text Y liegen sehr nah beieinander im Dendrogramm.“
+</blockquote>
+
+<div class="task">
+  <h3>Aufgabe 7.3 – Angemessene Interpretation (Freitext)</h3>
+
+  <p>
+    Formuliere eine <strong>vorsichtige, methodisch korrekte</strong> Schlussfolgerung.
+    Verwende die Begriffe:  
+    <em>Hinweis</em>, <em>Routinen</em>, <em>Parameter</em>, <em>weitere Belege</em>.
+  </p>
+
+  <textarea id="task7_3-input"
+            placeholder="Deine Schlussfolgerung ..."></textarea>
+
+  <button onclick="checkText('task7_3',['hinweis','routinen','parameter','belege'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task7_3-feedback" class="feedback"
+       data-correct="Sehr gut: Du formulierst vorsichtig und methodisch korrekt."
+       data-partial="Ansatz erkennbar – präzisiere mit allen geforderten Begriffen."
+       data-incorrect="Zu stark verallgemeinert: Vermeide Beweisansprüche."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<div id="progress"></div>
+
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>
