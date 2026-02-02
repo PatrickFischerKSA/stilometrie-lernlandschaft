@@ -153,6 +153,89 @@
        data-none="Bitte schreibe mindestens 3 Sätze."></div>
 </div>
 
+<hr>
+
+<h2>7.4 Mini-Korpus: Interpretation mit Tools (Voyant / stylo)</h2>
+
+<p>
+  Um die Ebenentrennung praktisch zu üben, arbeitest du nun mit einem kurzen Beispielkorpus.
+  Ziel ist <strong>nicht</strong>, Autorschaft zu beweisen, sondern zu zeigen,
+  wie technische Muster und hermeneutische Deutung auseinanderfallen.
+</p>
+
+<h3>Material (Downloads)</h3>
+<ul>
+  <li><a href="../assets/corpora/modul7_voyant_corpus.txt" download>
+      modul7_voyant_corpus.txt (für Voyant)</a></li>
+  <li><a href="../assets/corpora/modul7_stylo_corpus.txt" download>
+      modul7_stylo_corpus.txt (für stylo)</a></li>
+</ul>
+
+<h3>Tool-Links</h3>
+<ul>
+  <li><a href="https://voyant-tools.org/" target="_blank" rel="noopener">
+      Voyant öffnen</a></li>
+  <li><a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">
+      RStudio Desktop</a></li>
+</ul>
+
+<h3>7.4A – Voyant-Exploration (angeleitete Beobachtung)</h3>
+
+<p>
+  Lade <code>modul7_voyant_corpus.txt</code> in Voyant hoch und beobachte:
+</p>
+
+<ul>
+  <li>Welche Wörter dominieren im Cirrus?</li>
+  <li>Unterscheiden sich die drei Texte im Trends-Panel?</li>
+  <li>Welche Kollokationen fallen im Links-Panel auf?</li>
+</ul>
+
+<div class="task">
+  <h3>Aufgabe 7.4A</h3>
+  <textarea id="task7_4a-input"
+            placeholder="Deine Beobachtungen in 3–5 Sätzen ..."></textarea>
+
+  <button onclick="checkText('task7_4a',['cirrus','trends','links'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task7_4a-feedback" class="feedback"
+       data-correct="Sehr gut: Du beziehst dich auf alle drei Voyant-Ansichten."
+       data-partial="Ansatz erkennbar – nenne noch die fehlenden Panels."
+       data-incorrect="Zu allgemein – beziehe dich konkret auf Cirrus, Trends oder Links."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<h3>7.4B – Übertrag auf stylo (Parameter & Vorsicht)</h3>
+
+<p>
+  Stelle dir vor, du würdest nun <code>modul7_stylo_corpus.txt</code> in stylo analysieren
+  (Delta, MFW = 1000).
+</p>
+
+<div class="task">
+  <h3>Aufgabe 7.4B</h3>
+  <p>
+    Formuliere eine vorsichtige Schlussfolgerung, die <strong>keinen Beweisanspruch</strong> erhebt.
+    Verwende die Begriffe:  
+    <em>Hinweis</em>, <em>Parameter</em>, <em>Routinen</em>, <em>weitere Belege</em>.
+  </p>
+
+  <textarea id="task7_4b-input"
+            placeholder="Deine Schlussfolgerung ..."></textarea>
+
+  <button onclick="checkText('task7_4b',['hinweis','parameter','routinen','belege'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task7_4b-feedback" class="feedback"
+       data-correct="Sehr gut: Du formulierst vorsichtig und methodisch reflektiert."
+       data-partial="Ansatz erkennbar – integriere alle geforderten Begriffe."
+       data-incorrect="Zu stark verallgemeinert – vermeide Beweisansprüche."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
 <div id="progress"></div>
 
 </main>
