@@ -1,43 +1,122 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Modul 4 – Autorschaft</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>Modul 4 – Autorschaft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
 <nav id="sidebar">
-<h2>Stilometrie</h2>
-<ul>
-<li><a href="../index.html">Start</a></li>
-<li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
-<li><a href="modul_02.html">Modul 2 – Features</a></li>
-<li><a href="modul_03.html">Modul 3 – Delta</a></li>
-<li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
-<li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
-<li><a href="modul_06.html">Modul 6 – Tools</a></li>
-<li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
-<li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
-<li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
-</ul>
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><strong>Modul 4 – Autorschaft</strong></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
 </nav>
+
 <main id="content">
 
-<h1>Modul 4 – Autorschaft</h1>
-<p>Stilometrie kann Hinweise auf Autorschaft geben, aber keine Beweise liefern.</p>
+<h1>Modul 4 – Autorschaft, Signaltrennung, Genre-Effekte</h1>
 
-<div class="task">
-<h3>Aufgabe 4.1 – Kritisches Denken</h3>
-<p>Welche Aussage ist zulässig?</p>
-<label><input type="radio" name="task4_1" value="A"> A) Stilometrie beweist Autorschaft</label><br>
-<label><input type="radio" name="task4_1" value="B"> B) Stilometrie legt stilistische Nähe nahe</label><br>
-<button onclick="checkMC('task4_1',['B'])">Antwort prüfen</button>
-<div id="task4_1-feedback" class="feedback"></div>
+<p>
+Autorschaftsattribution ist ein klassisches Einsatzfeld der Stilometrie – aber zugleich der Bereich,
+in dem Fehlinterpretationen am häufigsten sind. Stilometrie misst <strong>Ähnlichkeit</strong> zwischen Texten,
+nicht „Autoridentität“.
+</p>
+
+<div class="critical-box">
+  <strong>Grundsatz:</strong> Stilometrische Nähe kann viele Ursachen haben: Autor, Genre, Zeit, Übersetzung, Edition, Thema, Textlänge.
 </div>
 
-<div id="progress"></div>
+<h2>4.1 Signale und Überlagerungen</h2>
+<ul>
+  <li><strong>Autorsignal:</strong> stabile Routinen, oft in Funktionswörtern/Struktur</li>
+  <li><strong>Genresignal:</strong> Textsortenkonventionen (Dialogdichte, Erzähltempus, Formeln)</li>
+  <li><strong>Zeitsignal:</strong> Orthographie, Modewörter, Syntaxtrends</li>
+  <li><strong>Übersetzersignal:</strong> Übersetzungsentscheidungen können Autor überdecken</li>
+  <li><strong>Editorisches Signal:</strong> Vereinheitlichung/Normalisierung in Editionen</li>
+</ul>
+
+<h2>4.2 Methodische Konsequenzen</h2>
+<ul>
+  <li>Vergleiche nur Texte, die <strong>vergleichbar</strong> sind (Genre, Umfang, Zeitfenster).</li>
+  <li>Dokumentiere Vorverarbeitung (Tokenisierung, Normalisierung).</li>
+  <li>Verwende negative Kontrollen (z. B. Genre-Mischung als Stress-Test).</li>
+  <li>Formuliere Aussagen als <strong>Plausibilitäten</strong>, nicht als Beweise.</li>
+</ul>
+
+<hr>
+
+<h2>4.3 Ressourcen</h2>
+<ul>
+  <li><a href="https://fortext.net/routinen/methoden/stilometrie" target="_blank" rel="noopener">forTEXT: Stilometrie</a></li>
+  <li><a href="../assets/docs/Delta_in_der_stilometrischen_Autorschaftsattribution_2016.pdf" target="_blank" rel="noopener">Delta in der Autorschaftsattribution (PDF)</a></li>
+  <li><a href="../assets/docs/Digitale_Literaturwissenschaft_Jannidis_2022.pdf" target="_blank" rel="noopener">Jannidis: Digitale Literaturwissenschaft (PDF)</a></li>
+</ul>
+
+<hr>
+
+<h2>4.4 Übungen</h2>
+
+<div class="task">
+  <h3>Aufgabe 4.1 – Zulässige Aussage (MC)</h3>
+  <p>Welche Aussage ist methodisch zulässig?</p>
+
+  <label><input type="radio" name="task4_1" value="A"> A) Stilometrie beweist Autorschaft</label><br>
+  <label><input type="radio" name="task4_1" value="B"> B) Die Analyse legt stilistische Nähe nahe</label><br>
+  <label><input type="radio" name="task4_1" value="C"> C) Ein Cluster bedeutet automatisch gleiches Genre</label><br>
+  <label><input type="radio" name="task4_1" value="D"> D) Der Computer interpretiert Intention</label><br>
+
+  <button onclick="checkMC('task4_1',['B'])">Antwort prüfen</button>
+  <div id="task4_1-feedback" class="feedback"
+       data-correct="Korrekt: Zulässig ist die vorsichtige Aussage über stilistische Nähe."
+       data-partial="Teilweise: Prüfe, ob du von Nähe direkt auf Ursache schliesst."
+       data-incorrect="Nicht korrekt: Nähe ≠ Beweis, Cluster ≠ automatisch Genre, Algorithmus ≠ Intention."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 4.2 – Signaldiagnose (Freitext)</h3>
+  <p>
+    Zwei Texte clustern stark, obwohl sie von verschiedenen Autor*innen stammen.
+    Nenne <strong>drei plausible Erklärungen</strong> (nicht Autorschaft!) und begründe kurz.
+    Verwende mindestens: <em>Genre</em>, <em>Edition</em> oder <em>Übersetzung</em>, <em>Signal</em>.
+  </p>
+  <textarea id="task4_2-input" placeholder="Erklärung 1 ... Erklärung 2 ... Erklärung 3 ..."></textarea>
+  <button onclick="checkText('task4_2',['genre','signal','edition','übersetz'])">Antwort prüfen</button>
+  <div id="task4_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du erklärst Nähe als Signalüberlagerung (Genre/Edition/Übersetzung)."
+       data-partial="Ansatz: Du nennst plausible Gründe, aber ergänze Signalbegriff und mind. einen konkreten Faktor (Genre/Edition/Übersetzung)."
+       data-incorrect="Zu vage: Nenne konkrete nicht-autoriale Ursachen (Genre, Zeit, Übersetzung, Edition, Textlänge)."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 4.3 – Korpusdesign (Planungsaufgabe)</h3>
+  <p>
+    Du willst prüfen, ob ein anonymes Kapitel eher zu Autor X oder Y passt. Skizziere dein Korpusdesign:
+    (a) welche Texte nimmst du (Genre/Zeitraum/Umfang)? (b) welche Feature-Familie? (c) welche Kontrolle gegen Genre-Signal?
+    Verwende: <em>Korpus</em>, <em>Kontrolle</em>, <em>Genre</em>, <em>Features</em>.
+  </p>
+  <textarea id="task4_3-input" placeholder="(a) ... (b) ... (c) ..."></textarea>
+  <button onclick="checkText('task4_3',['korpus','kontrolle','genre','feature'])">Antwort prüfen</button>
+  <div id="task4_3-feedback" class="feedback"
+       data-correct="Korrekt: Du planst Vergleichbarkeit und Kontrolle (Genre/Umfang) sowie Featurewahl."
+       data-partial="Teilweise: Ergänze eine explizite Kontrollidee gegen Genre- oder Editionssignal."
+       data-incorrect="Zu allgemein: Skizziere konkrete Textauswahlkriterien und eine Kontrollstrategie."></div>
+</div>
+
+  <div id="progress"></div>
 </main>
+
 <script src="../assets/js/app.js"></script>
 </body>
 </html>

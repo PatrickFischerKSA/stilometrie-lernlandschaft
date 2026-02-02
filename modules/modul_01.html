@@ -1,52 +1,134 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Modul 1 – Grundlagen</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>Modul 1 – Grundlagen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
 <nav id="sidebar">
-<h2>Stilometrie</h2>
-<ul>
-<li><a href="../index.html">Start</a></li>
-<li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
-<li><a href="modul_02.html">Modul 2 – Features</a></li>
-<li><a href="modul_03.html">Modul 3 – Delta</a></li>
-<li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
-<li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
-<li><a href="modul_06.html">Modul 6 – Tools</a></li>
-<li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
-<li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
-<li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
-</ul>
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><strong>Modul 1 – Grundlagen</strong></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
 </nav>
+
 <main id="content">
 
 <h1>Modul 1 – Grundlagen der Stilometrie</h1>
-<p>Stilometrie untersucht Texte mit quantitativen Methoden, um formale Muster vergleichbar zu machen.</p>
-<div class="info-box">Kernidee: Stil zeigt sich in wiederkehrenden sprachlichen Routinen.</div>
 
-<h2>1.1 Was ist Stilometrie?</h2>
-<ul>
-<li>messbar: Wortfrequenzen, Satzlängen, Funktionswörter</li>
-<li>vergleichend: Texte werden zueinander in Beziehung gesetzt</li>
-<li>modellbasiert: Ergebnisse hängen von Annahmen ab</li>
-</ul>
+<p>
+Stilometrie ist ein Teilgebiet der Digital Humanities, das Texte mit quantitativen Verfahren
+so beschreibt, dass <strong>Vergleiche</strong> zwischen Texten möglich werden.
+Im Zentrum stehen nicht „Bedeutungen“, sondern <strong>messbare Muster</strong> (z. B. Häufigkeiten, Verteilungen, Längen).
+</p>
 
-<div class="task">
-<h3>Aufgabe 1.1 – Begriffsverständnis</h3>
-<p>Welche Aussage trifft zu?</p>
-<label><input type="radio" name="task1_1" value="A"> A) Stilometrie interpretiert Bedeutungen</label><br>
-<label><input type="radio" name="task1_1" value="B"> B) Stilometrie vergleicht formale Muster</label><br>
-<label><input type="radio" name="task1_1" value="C"> C) Stilometrie beweist Autorschaft</label><br>
-<button onclick="checkMC('task1_1',['B'])">Antwort prüfen</button>
-<div id="task1_1-feedback" class="feedback"></div>
+<div class="info-box">
+  <strong>Leitidee:</strong> Stil zeigt sich besonders zuverlässig in Merkmalen, die Autor*innen meist nicht bewusst steuern
+  (z. B. Funktionswörter, häufige syntaktische Routinen, Interpunktion).
 </div>
 
-<div id="progress"></div>
+<h2>1.1 Wofür verwendet man Stilometrie?</h2>
+<ul>
+  <li><strong>Ähnlichkeitsanalyse:</strong> Welche Texte sind formal ähnlich?</li>
+  <li><strong>Autorschaftsattribution (vorsichtig!):</strong> Welche Autorschaft ist plausibel?</li>
+  <li><strong>Werkentwicklung:</strong> Verändert sich der Stil innerhalb eines Werks / Œuvres?</li>
+  <li><strong>Übersetzungen / Editionen:</strong> Welche „Handschrift“ ist sichtbar (Autor vs. Übersetzer vs. Editor)?</li>
+  <li><strong>Unterricht:</strong> Stilbegriffe operationalisieren, Methodenreflexion, KI-Kompetenz.</li>
+</ul>
+
+<h2>1.2 Was Stilometrie nicht ist</h2>
+<div class="warning-box">
+  <ul>
+    <li>kein Beweisverfahren</li>
+    <li>kein Ersatz für Lektüre oder Interpretation</li>
+    <li>keine automatische „Bedeutungserkennung“</li>
+  </ul>
+</div>
+
+<h2>1.3 Grundworkflow (ohne Technikjargon)</h2>
+<ol>
+  <li><strong>Korpus wählen:</strong> Welche Texte gehören in den Vergleich – und warum?</li>
+  <li><strong>Vorverarbeitung:</strong> Tokenisierung, Bereinigung, ggf. Normalisierung.</li>
+  <li><strong>Features wählen:</strong> Welche Messgrössen sollen Stil repräsentieren?</li>
+  <li><strong>Distanz berechnen:</strong> Wie wird „Ähnlichkeit“ formal definiert?</li>
+  <li><strong>Visualisieren:</strong> z. B. Cluster/Dendrogramm.</li>
+  <li><strong>Interpretieren:</strong> technisch → methodisch → fachlich.</li>
+</ol>
+
+<hr>
+
+<h2>1.4 Ressourcen (PDF & Web)</h2>
+<ul>
+  <li><a href="https://fortext.net/routinen/methoden/stilometrie" target="_blank" rel="noopener">forTEXT: Stilometrie</a></li>
+  <li><a href="../assets/docs/Literaturwissenschaft_und_Informatik.pdf" target="_blank" rel="noopener">Literaturwissenschaft und Informatik (PDF)</a></li>
+  <li><a href="../assets/docs/Quantitative_Ansaetze_Literaturwissenschaft_2017.pdf" target="_blank" rel="noopener">Quantitative Ansätze (PDF)</a></li>
+</ul>
+
+<hr>
+
+<h2>1.5 Wissenssicherung & Übungen</h2>
+
+<div class="task">
+  <h3>Aufgabe 1.1 – Begriffsklärung (MC)</h3>
+  <p>Welche Aussage trifft zu?</p>
+
+  <label><input type="radio" name="task1_1" value="A"> A) Stilometrie interpretiert Bedeutungen direkt</label><br>
+  <label><input type="radio" name="task1_1" value="B"> B) Stilometrie vergleicht formale Muster in Texten</label><br>
+  <label><input type="radio" name="task1_1" value="C"> C) Stilometrie liefert Beweise für Autorschaft</label><br>
+  <label><input type="radio" name="task1_1" value="D"> D) Stilometrie funktioniert ohne Korpusentscheidungen</label><br>
+
+  <button onclick="checkMC('task1_1',['B'])">Antwort prüfen</button>
+  <div id="task1_1-feedback" class="feedback"
+       data-correct="Korrekt: Stilometrie vergleicht formale Muster, nicht Bedeutungen."
+       data-incorrect="Nicht korrekt: Prüfe, ob du Stilometrie mit Interpretation/Beweis verwechselt."
+       data-partial="Teilweise: Überprüfe, ob du Korpus- und Modellentscheidungen unterschätzt."
+       data-none="Bitte wähle eine Option."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 1.2 – Workflow ordnen</h3>
+  <p>
+    Schreibe den Stilometrie-Workflow in eigenen Worten in 4–6 Sätzen.
+    Verwende mindestens die Begriffe: <em>Korpus</em>, <em>Features</em>, <em>Distanz</em>, <em>Interpretation</em>.
+  </p>
+  <textarea id="task1_2-input" placeholder="Dein Workflow ..."></textarea>
+  <button onclick="checkText('task1_2',['korpus','feature','distanz','interpretation'])">Antwort prüfen</button>
+  <div id="task1_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du benennst Korpus, Featurewahl, Distanz und Interpretation als getrennte Schritte."
+       data-partial="Ansatz erkennbar, aber noch unvollständig: Ergänze die fehlenden Prozessbegriffe."
+       data-incorrect="Zu allgemein oder inhaltlich: Beschreibe den Vergleichsprozess (Korpus → Features → Distanz → Interpretation)."
+       data-none="Schreibe mindestens 2–3 Sätze und nutze die geforderten Begriffe."></div>
+</div>
+
+<div class="task">
+  <h3>Aufgabe 1.3 – Grenzen (Kurzargument)</h3>
+  <p>
+    Nenne zwei Gründe, warum Stilometrie keine „Beweise“ liefert.
+    Begründe jeweils in einem Satz.
+  </p>
+  <textarea id="task1_3-input" placeholder="Grund 1 ... Grund 2 ..."></textarea>
+  <button onclick="checkText('task1_3',['modell','entscheidung','korpus','signal'])">Antwort prüfen</button>
+  <div id="task1_3-feedback" class="feedback"
+       data-correct="Korrekt: Du argumentierst über Modellannahmen/Entscheidungen und Signalüberlagerungen."
+       data-partial="Teilweise: Du nennst Grenzen, aber begründe methodisch präziser (Modell/Korpus/Signale)."
+       data-incorrect="Zu vage: Formuliere methodisch (Korpuswahl, Featurewahl, Distanzmass, Signalüberlagerung)."></div>
+</div>
+
+  <div id="progress"></div>
 </main>
+
 <script src="../assets/js/app.js"></script>
 </body>
 </html>
