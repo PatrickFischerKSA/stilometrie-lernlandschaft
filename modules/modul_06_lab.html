@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Modul 6 – Lab (Voyant + stylo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools & Routinen</a></li>
+    <li><strong>Modul 6 – Lab (Voyant + stylo)</strong></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
+
+<h1>Modul 6 – Labor: Praktische Stilometrie (Voyant + stylo)</h1>
+
+<h2>Ziele des Labs</h2>
+<ul>
+  <li>Ein Korpus in <strong>Voyant</strong> laden und Visualisierungen lesen</li>
+  <li>Ein Korpus für <strong>stylo</strong> vorbereiten</li>
+  <li>In <strong>RStudio</strong> eine erste Delta-Analyse ausführen</li>
+  <li>Verstehen, wie Routinen, Parameter und Interpretation zusammenhängen</li>
+</ul>
+
+<hr>
+
+<h2>LAB-TEIL 1: VOYANT (EXPLORATION)</h2>
+
+<p><strong>Material:</strong>
+<a href="../assets/corpora/voyant_corpus.txt" download>voyant_corpus.txt herunterladen</a>
+</p>
+
+<p><strong>Tool:</strong>
+<a href="https://voyant-tools.org/" target="_blank" rel="noopener">https://voyant-tools.org/</a>
+</p>
+
+<h3>Schritt 1 – Korpus laden</h3>
+<ol>
+  <li>Öffne Voyant.</li>
+  <li>Klicke auf <em>Upload</em>.</li>
+  <li>Lade <code>voyant_corpus.txt</code> hoch.</li>
+  <li>Klicke auf <em>Reveal</em>.</li>
+</ol>
+
+<h3>Schritt 2 – Erste Orientierung</h3>
+<ul>
+  <li>Cirrus (Wortwolke)</li>
+  <li>Trends (Verteilung über Texte)</li>
+  <li>Links (Kollokationen)</li>
+</ul>
+
+<div class="task">
+<h3>Aufgabe V-1 – Exploration dokumentieren</h3>
+<textarea id="lab_v1-input" placeholder="Deine Beobachtungen ..."></textarea>
+<button onclick="checkText('lab_v1',['morgen','fluss'])">Antwort prüfen</button>
+<div id="lab_v1-feedback" class="feedback"
+ data-correct="Gute Beobachtungen – du beziehst dich auf zentrale Begriffe."
+ data-partial="Ansatz erkennbar – vertiefe deine Beobachtungen."
+ data-incorrect="Zu allgemein – beziehe dich auf Cirrus, Trends oder Links."
+ data-none="Bitte schreibe etwas."></div>
+</div>
+
+<hr>
+
+<h2>LAB-TEIL 2: STYLO + RSTUDIO (ANALYSE)</h2>
+
+<p><strong>Download RStudio:</strong>
+<a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">
+https://posit.co/download/rstudio-desktop/</a>
+</p>
+
+<p><strong>stylo-Tutorial:</strong>
+<a href="https://www.dropbox.com/scl/fi/e8zt6h9rm1prtmukww117/Tutorial-Stylo-installieren.mp4?rlkey=g30rruta6bcb2g4sfv2i1dcck&st=89os1jz9&dl=0"
+ target="_blank" rel="noopener">Video öffnen</a>
+</p>
+
+<p><strong>Material:</strong>
+<a href="../assets/corpora/stylo_corpus.txt" download>stylo_corpus.txt herunterladen</a>
+</p>
+
+<h3>Schritt 1 – Projekt anlegen</h3>
+<ol>
+  <li>RStudio öffnen.</li>
+  <li>File → New Project → New Directory → New Project.</li>
+  <li>Ordnername: <code>stilometrie_lab</code>.</li>
+</ol>
+
+<h3>Schritt 2 – stylo laden</h3>
+<pre><code>install.packages("stylo")
+library(stylo)</code></pre>
+
+<h3>Schritt 3 – Korpus vorbereiten</h3>
+<p>Lege einen Ordner <code>corpus/</code> an und speichere dort drei Textdateien.</p>
+
+<h3>Schritt 4 – Analyse ausführen</h3>
+<pre><code>stylo()</code></pre>
+
+<div class="task">
+<h3>Aufgabe S-1 – Ergebnisinterpretation</h3>
+<textarea id="lab_s1-input" placeholder="Deine Interpretation ..."></textarea>
+<button onclick="checkText('lab_s1',['dendrogramm','delta'])">Antwort prüfen</button>
+<div id="lab_s1-feedback" class="feedback"
+ data-correct="Sehr gut – du beziehst dich auf Delta und Dendrogramm."
+ data-partial="Ansatz erkennbar – werde präziser."
+ data-incorrect="Zu allgemein – gehe auf Delta/Dendrogramm ein."
+ data-none="Bitte schreibe etwas."></div>
+</div>
+
+<hr>
+
+<h2>LAB-TEIL 3: ROUTINEN (FORTE​XT)</h2>
+<p>
+<a href="https://fortext.net/routinen" target="_blank" rel="noopener">
+forTEXT-Routinen öffnen</a>
+</p>
+
+<div class="task">
+<h3>Aufgabe R-1 – Methodenmapping</h3>
+<textarea id="lab_r1-input" placeholder="Mapping ..."></textarea>
+<button onclick="checkText('lab_r1',['korpus','tokenisierung','featurewahl','delta','interpretation'])">Antwort prüfen</button>
+<div id="lab_r1-feedback" class="feedback"
+ data-correct="Sehr gut – du ordnest die Schritte korrekt zu."
+ data-partial="Ansatz erkennbar – ergänze fehlende Schritte."
+ data-incorrect="Zu allgemein – nutze die geforderten Begriffe."
+ data-none="Bitte schreibe etwas."></div>
+</div>
+
+<hr>
+
+<h2>LAB-TEIL 4: SYNTHese</h2>
+<div class="task">
+<textarea id="lab_syn-input" placeholder="6–8 Sätze ..."></textarea>
+<button onclick="checkText('lab_syn',['exploration','routinen','parameter','modell','delta','interpretation'])">Antwort prüfen</button>
+<div id="lab_syn-feedback" class="feedback"
+ data-correct="Sehr gute Synthese mit allen Kernbegriffen."
+ data-partial="Ansatz erkennbar – ergänze fehlende Begriffe."
+ data-incorrect="Zu allgemein – beziehe dich auf alle Kernbegriffe."
+ data-none="Bitte schreibe etwas."></div>
+</div>
+
+<div id="progress"></div>
+</main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
