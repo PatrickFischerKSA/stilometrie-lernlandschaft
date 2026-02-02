@@ -1,30 +1,204 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 8</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 8 – Unterricht & KI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><a href='modul_06.html'>Modul 6</a></li><li><a href='modul_07.html'>Modul 7</a></li><li><strong>Modul 8</strong></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
-<main id='content'>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><a href="modul_06.html">Modul 6 – Tools & Routinen</a></li>
+    <li><a href="modul_06_lab.html">Modul 6 – Lab (Voyant + stylo)</a></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><strong>Modul 8 – Unterricht & KI</strong></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
 
 <h1>Modul 8 – Unterricht & KI</h1>
-<p>Lernpfad: Routinen → Methode → Parameter → Interpretation → Unterricht.</p>
 
-<div class='task'>
-<h3>Aufgabe 8.1 – Didaktik (Freitext)</h3>
-<p>Wo würdest du Stilometrie im Unterricht einsetzen?</p>
-<textarea id='task8_1-input'></textarea>
-<button onclick="checkText('task8_1',['lernziel','methode'])">Antwort prüfen</button>
-<div id='task8_1-feedback' class='feedback'
- data-correct='Sehr gut: Du verknüpfst Lernziel und Methode.'
- data-partial='Ansatz: Benenne Lernziel und Methode expliziter.'
- data-incorrect='Zu allgemein: Beziehe dich auf Lernziele.'></div>
+<div class="warning-box">
+  <strong>Leitsatz:</strong>  
+  <em>Tools erweitern Unterricht – sie ersetzen ihn nicht.</em>
 </div>
 
-<div id='progress'></div>
+<h2>8.0 Worum geht es in diesem Modul?</h2>
+
+<p>
+  In diesem Modul reflektieren wir den Einsatz von Stilometrie und KI im Unterricht.
+  Es geht weniger um Technik, sondern um didaktische Entscheidungen:
+</p>
+
+<ul>
+  <li>Was können digitale Methoden sinnvoll leisten?</li>
+  <li>Wo liegen ihre Grenzen?</li>
+  <li>Wie lassen sie sich lernwirksam integrieren?</li>
+</ul>
+
+<p>
+  Zentral ist die Unterscheidung zwischen:
+</p>
+
+<ul>
+  <li><strong>Werkzeugen:</strong> Voyant, stylo, KI-Textgeneratoren.</li>
+  <li><strong>Urteilsfähigkeit:</strong> Kritische Reflexion, Kontextwissen, Interpretation.</li>
+</ul>
+
+<div class="info-box">
+  <strong>Merksatz:</strong>  
+  Didaktik steuert den Einsatz von Technik – nicht umgekehrt.
+</div>
+
+<hr>
+
+<h2>8.1 Werkzeuge vs. Urteilsfähigkeit (MC)</h2>
+
+<div class="task">
+  <p>Welche Aussage beschreibt den didaktisch sinnvollsten Umgang mit KI?</p>
+
+  <label><input type="radio" name="task8_1" value="A">
+    A) KI ersetzt menschliche Interpretation vollständig.
+  </label><br>
+
+  <label><input type="radio" name="task8_1" value="B">
+    B) KI dient als Werkzeug, das kritisch begleitet werden muss.
+  </label><br>
+
+  <label><input type="radio" name="task8_1" value="C">
+    C) KI sollte im Unterricht grundsätzlich verboten werden.
+  </label><br>
+
+  <button onclick="checkMC('task8_1',['B'])">Antwort prüfen</button>
+
+  <div id="task8_1-feedback" class="feedback"
+       data-correct="Korrekt: KI ist ein Werkzeug, das reflektiert eingesetzt werden sollte."
+       data-partial="Teilweise richtig – betone stärker die kritische Begleitung."
+       data-incorrect="Nicht korrekt: Weder totale Ablehnung noch totale Delegation sind didaktisch sinnvoll."
+       data-none="Bitte wähle eine Option."></div>
+</div>
+
+<hr>
+
+<h2>8.2 Chancen und Risiken im Unterricht</h2>
+
+<p>
+  Mögliche Chancen:
+</p>
+
+<ul>
+  <li>Exploratives Lernen mit Voyant.</li>
+  <li>Methodenverständnis durch stylo.</li>
+  <li>Vergleich von KI-generierten und menschlichen Texten.</li>
+</ul>
+
+<p>
+  Mögliche Risiken:
+</p>
+
+<ul>
+  <li>Unkritische Übernahme von Tool-Ergebnissen.</li>
+  <li>Verwechslung von Korrelation und Kausalität.</li>
+  <li>Reduktion von Literatur auf messbare Merkmale.</li>
+</ul>
+
+<div class="task">
+  <h3>Aufgabe 8.2 – Reflexion (Freitext)</h3>
+  <p>
+    Nenne in 3–4 Sätzen eine Chance und ein Risiko beim Einsatz von Stilometrie im Unterricht.
+    Verwende die Begriffe: <em>Werkzeug</em>, <em>Reflexion</em>, <em>Kontext</em>.
+  </p>
+
+  <textarea id="task8_2-input"
+            placeholder="Deine Antwort ..."></textarea>
+
+  <button onclick="checkText('task8_2',['werkzeug','reflexion','kontext'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task8_2-feedback" class="feedback"
+       data-correct="Sehr gut: Du benennst Chance und Risiko und reflektierst beides."
+       data-partial="Ansatz erkennbar – integriere alle drei Begriffe explizit."
+       data-incorrect="Zu allgemein – werde konkreter und nutze die geforderten Begriffe."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<hr>
+
+<h2>8.3 Transfer: KI im Literaturunterricht</h2>
+
+<p>
+  Angenommen, Lernende nutzen einen KI-Textgenerator, um eine Interpretation zu schreiben.
+</p>
+
+<div class="task">
+  <h3>Aufgabe 8.3 – Angemessene Einbettung (Freitext)</h3>
+
+  <p>
+    Formuliere in 3–5 Sätzen, wie Lehrpersonen KI produktiv und kritisch einbinden könnten.
+    Verwende die Begriffe:  
+    <em>Transparenz</em>, <em>Überprüfung</em>, <em>Eigenleistung</em>.
+  </p>
+
+  <textarea id="task8_3-input"
+            placeholder="Deine Antwort ..."></textarea>
+
+  <button onclick="checkText('task8_3',['transparenz','überprüfung','eigenleistung'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task8_3-feedback" class="feedback"
+       data-correct="Sehr gut: Du beschreibst einen reflektierten, verantwortungsvollen Einsatz von KI."
+       data-partial="Ansatz erkennbar – integriere alle drei Begriffe explizit."
+       data-incorrect="Zu unspezifisch – beschreibe konkrete didaktische Massnahmen."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<hr>
+
+<h2>8.4 Mini-Szenario: Stilometrie + KI</h2>
+
+<p>
+  Eine Klasse vergleicht mit Voyant einen literarischen Text mit einem KI-generierten Text.
+  Anschliessend wird in stylo eine Delta-Analyse durchgeführt.
+</p>
+
+<div class="task">
+  <h3>Aufgabe 8.4 – Synthese</h3>
+  <p>
+    Erkläre in 4–6 Sätzen, wie die drei Ebenen zusammenspielen:
+    <em>Exploration</em> (Voyant), <em>Modell</em> (stylo) und <em>Interpretation</em>.
+  </p>
+
+  <textarea id="task8_4-input"
+            placeholder="Deine Synthese ..."></textarea>
+
+  <button onclick="checkText('task8_4',['exploration','modell','interpretation'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task8_4-feedback" class="feedback"
+       data-correct="Sehr gut: Du verbindest alle drei Ebenen logisch und reflektiert."
+       data-partial="Ansatz erkennbar – stelle die Beziehungen klarer dar."
+       data-incorrect="Zu allgemein – gehe explizit auf alle drei Ebenen ein."
+       data-none="Bitte schreibe mindestens 4 Sätze."></div>
+</div>
+
+<div id="progress"></div>
+
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>
