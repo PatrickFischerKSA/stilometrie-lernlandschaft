@@ -1,46 +1,236 @@
 <!DOCTYPE html>
-<html lang='de'>
+<html lang="de">
 <head>
-<meta charset='UTF-8'>
-<title>Modul 6</title>
-<link rel='stylesheet' href='../assets/css/style.css'>
+  <meta charset="UTF-8">
+  <title>Modul 6 – Tools und Routinen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<nav id='sidebar'><ul><li><a href='../index.html'>Start</a></li><li><a href='modul_01.html'>Modul 1</a></li><li><a href='modul_02.html'>Modul 2</a></li><li><a href='modul_03.html'>Modul 3</a></li><li><a href='modul_04.html'>Modul 4</a></li><li><a href='modul_05.html'>Modul 5</a></li><li><strong>Modul 6</strong></li><li><a href='modul_07.html'>Modul 7</a></li><li><a href='modul_08.html'>Modul 8</a></li><li><a href='modul_09.html'>Modul 9</a></li></ul></nav>
-<main id='content'>
+
+<nav id="sidebar">
+  <h2>Stilometrie</h2>
+  <ul>
+    <li><a href="../index.html">Start</a></li>
+    <li><a href="modul_01.html">Modul 1 – Grundlagen</a></li>
+    <li><a href="modul_02.html">Modul 2 – Features</a></li>
+    <li><a href="modul_03.html">Modul 3 – Delta</a></li>
+    <li><a href="modul_04.html">Modul 4 – Autorschaft</a></li>
+    <li><a href="modul_05.html">Modul 5 – Historische Texte</a></li>
+    <li><strong>Modul 6 – Tools & Routinen</strong></li>
+    <li><a href="modul_07.html">Modul 7 – Interpretation</a></li>
+    <li><a href="modul_08.html">Modul 8 – Unterricht & KI</a></li>
+    <li><a href="modul_09.html">Modul 9 – Abschluss</a></li>
+  </ul>
+</nav>
+
+<main id="content">
 
 <h1>Modul 6 – Tools und Routinen</h1>
-<p>Online-Tools operationalisieren stilometrische Routinen.</p>
+
+<p>
+  In diesem Modul lernst du, wie stilometrische <strong>Routinen</strong> durch
+  konkrete digitale Werkzeuge operationalisiert werden.  
+  Wir unterscheiden drei Ebenen:
+</p>
+
 <ul>
-<li>Voyant (Exploration)</li>
-<li>stylo (R-Paket)</li>
-<li>forTEXT-Routinen</li>
+  <li><strong>Exploration:</strong> schnelle Sichtung von Mustern (Voyant)</li>
+  <li><strong>Analyse:</strong> reproduzierbare Berechnungen (stylo in R/RStudio)</li>
+  <li><strong>Methodik:</strong> systematische Routinen (forTEXT)</li>
 </ul>
 
-<div class='task'>
-<h3>Aufgabe 6.1 – Tool-Zweck (MC)</h3>
-<label><input type='radio' name='task6_1' value='A'> A) Voyant ist primär zur Visualisierung von Wortfrequenzen</label><br>
-<label><input type='radio' name='task6_1' value='B'> B) Voyant beweist Autorschaft</label><br>
-<button onclick="checkMC('task6_1',['A'])">Antwort prüfen</button>
-<div id='task6_1-feedback' class='feedback'
- data-correct='Korrekt: Voyant ist ein Explorations-/Visualisierungstool.'
- data-incorrect='Nicht korrekt: Voyant ist kein Beweiswerkzeug.'
- data-none='Bitte wähle eine Option.'></div>
+<hr>
+
+<h2>6.1 Exploration: Voyant</h2>
+
+<img src="../assets/images/screenshots/voyant_screenshot.png"
+     alt="Voyant Beispieloberfläche"
+     style="max-width:100%; border:1px solid #ccc; margin-bottom:1rem;">
+
+<p>
+  <strong>Voyant</strong> ist ein browserbasiertes Explorationswerkzeug für Textanalyse.
+  Es eignet sich besonders für:
+</p>
+
+<ul>
+  <li>erste Sichtung von Wortfrequenzen</li>
+  <li>Vergleich mehrerer Texte</li>
+  <li>Visualisierung von Verteilungen (Trends, Cirrus, Links)</li>
+</ul>
+
+<p>
+  👉 <a href="https://voyant-tools.org/" target="_blank" rel="noopener">
+  Voyant öffnen (https://voyant-tools.org/)</a>
+</p>
+
+<p>
+  <strong>Beispielkorpus für Übung:</strong>
+  <a href="../assets/corpora/voyant_corpus.txt" download>
+  voyant_corpus.txt herunterladen</a>
+</p>
+
+<div class="task">
+  <h3>Aufgabe 6.1 – Zweck von Voyant (MC)</h3>
+
+  <label><input type="radio" name="task6_1" value="A">
+    A) Voyant ist primär zur Visualisierung von Wortfrequenzen
+  </label><br>
+
+  <label><input type="radio" name="task6_1" value="B">
+    B) Voyant beweist Autorschaft
+  </label><br>
+
+  <label><input type="radio" name="task6_1" value="C">
+    C) Voyant ersetzt stilometrische Distanzmasse
+  </label><br>
+
+  <button onclick="checkMC('task6_1',['A'])">Antwort prüfen</button>
+  <div id="task6_1-feedback" class="feedback"
+       data-correct="Korrekt: Voyant ist ein Explorations- und Visualisierungstool."
+       data-partial="Teilweise: Du erkennst den Nutzen, aber vermeidest Beweisansprüche."
+       data-incorrect="Nicht korrekt: Voyant ist kein Beweiswerkzeug und ersetzt keine Distanzmasse."
+       data-none="Bitte wähle eine Option."></div>
 </div>
 
-<div class='task'>
-<h3>Aufgabe 6.2 – Routinen (Freitext)</h3>
-<p>Welche Routine (Tokenisierung, Normalisierung, Featurewahl) ist zuerst nötig?</p>
-<textarea id='task6_2-input'></textarea>
-<button onclick="checkText('task6_2',['tokenisierung'])">Antwort prüfen</button>
-<div id='task6_2-feedback' class='feedback'
- data-correct='Sehr gut: Tokenisierung ist der erste Schritt.'
- data-partial='Ansatz: Benenne die richtige Routine explizit.'
- data-incorrect='Zu allgemein: Nenne die korrekte erste Routine.'></div>
+<hr>
+
+<h2>6.2 Reproduzierbare Analyse: stylo + RStudio</h2>
+
+<img src="../assets/images/screenshots/stylo_screenshot.png"
+     alt="stylo in RStudio Beispiel"
+     style="max-width:100%; border:1px solid #ccc; margin-bottom:1rem;">
+
+<p>
+  Für systematische Stilometrie wird häufig das R-Paket <strong>stylo</strong> genutzt.
+  Dafür benötigst du zunächst <strong>RStudio Desktop</strong>.
+</p>
+
+<p>
+  👉 <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">
+  RStudio Desktop herunterladen (offiziell)</a>
+</p>
+
+<p>
+  Nach der Installation von RStudio kannst du <strong>stylo</strong> installieren.
+  Schau dir dazu dieses Tutorial an:
+</p>
+
+<p>
+  👉 <a href="https://www.dropbox.com/scl/fi/e8zt6h9rm1prtmukww117/Tutorial-Stylo-installieren.mp4?rlkey=g30rruta6bcb2g4sfv2i1dcck&st=89os1jz9&dl=0"
+     target="_blank" rel="noopener">
+  Video: Tutorial zur Installation von stylo</a>
+</p>
+
+<p>
+  <strong>Beispielkorpus für Übung:</strong>
+  <a href="../assets/corpora/stylo_corpus.txt" download>
+  stylo_corpus.txt herunterladen</a>
+</p>
+
+<div class="info-box">
+  <strong>Merksatz:</strong> stylo ist mächtig – aber nur so gut wie deine
+  Parameter (MFW, Distanzmass, Vorverarbeitung).
 </div>
 
-<div id='progress'></div>
+<div class="task">
+  <h3>Aufgabe 6.2 – Reihenfolge der Routinen (Freitext)</h3>
+  <p>
+    Welche stilometrische Routine ist <strong>zuerst</strong> nötig:
+    Tokenisierung, Normalisierung oder Featurewahl? Begründe kurz.
+  </p>
+
+  <textarea id="task6_2-input"
+    placeholder="Deine Antwort ..."></textarea>
+
+  <button onclick="checkText('task6_2',['tokenisierung'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task6_2-feedback" class="feedback"
+       data-correct="Sehr gut: Tokenisierung ist der erste Schritt jeder Textanalyse."
+       data-partial="Ansatz: Du erkennst die richtige Richtung – benenne Tokenisierung klar."
+       data-incorrect="Nicht korrekt: Ohne Tokenisierung kannst du keine Features definieren."
+       data-none="Schreibe mindestens einen Satz."></div>
+</div>
+
+<hr>
+
+<h2>6.3 Methodische Routinen: forTEXT</h2>
+
+<p>
+  <strong>forTEXT</strong> bietet eine systematische Sammlung stilometrischer Routinen,
+  die den gesamten Prozess strukturieren:
+</p>
+
+<ul>
+  <li>Korpusdesign</li>
+  <li>Vorverarbeitung (Tokenisierung, Normalisierung)</li>
+  <li>Featurewahl</li>
+  <li>Distanzberechnung</li>
+  <li>Visualisierung</li>
+  <li>Interpretation</li>
+</ul>
+
+<p>
+  👉 <a href="https://fortext.net/routinen" target="_blank" rel="noopener">
+  forTEXT-Routinen (offizielle Übersicht)</a>
+</p>
+
+<div class="task">
+  <h3>Aufgabe 6.3 – Routinen zuordnen (MC)</h3>
+  <p>Welche der folgenden Punkte gehört zu den forTEXT-Routinen?</p>
+
+  <label><input type="radio" name="task6_3" value="A">
+    A) Beliebige Parameter raten
+  </label><br>
+
+  <label><input type="radio" name="task6_3" value="B">
+    B) Systematische Vorverarbeitung und Featurewahl
+  </label><br>
+
+  <label><input type="radio" name="task6_3" value="C">
+    C) Ergebnisse ohne Dokumentation berichten
+  </label><br>
+
+  <button onclick="checkMC('task6_3',['B'])">Antwort prüfen</button>
+  <div id="task6_3-feedback" class="feedback"
+       data-correct="Korrekt: forTEXT betont systematische Vorverarbeitung und Featurewahl."
+       data-partial="Teilweise: Du bist nah dran – vermeide aber willkürliche Entscheidungen."
+       data-incorrect="Nicht korrekt: forTEXT verlangt systematische, dokumentierte Entscheidungen."
+       data-none="Bitte wähle eine Option."></div>
+</div>
+
+<hr>
+
+<h2>6.4 Transfer: Tool-Kette verstehen</h2>
+
+<div class="task">
+  <h3>Aufgabe 6.4 – Synthese (Freitext)</h3>
+  <p>
+    Erkläre in 3–5 Sätzen, wie Voyant, stylo und forTEXT zusammenwirken.
+    Verwende die Begriffe:
+    <em>Exploration</em>, <em>Parameter</em>, <em>Routinen</em>, <em>Interpretation</em>.
+  </p>
+
+  <textarea id="task6_4-input"
+    placeholder="Deine Synthese ..."></textarea>
+
+  <button onclick="checkText('task6_4',['exploration','parameter','routinen','interpretation'])">
+    Antwort prüfen
+  </button>
+
+  <div id="task6_4-feedback" class="feedback"
+       data-correct="Sehr gut: Du verbindest Exploration, Parameterwahl, Routinen und Interpretation logisch."
+       data-partial="Ansatz erkennbar – ergänze noch fehlende Begriffe."
+       data-incorrect="Zu allgemein: Stelle die Abfolge klar dar (Voyant → stylo → forTEXT → Interpretation)."
+       data-none="Bitte schreibe mindestens 3 Sätze."></div>
+</div>
+
+<div id="progress"></div>
+
 </main>
-<script src='../assets/js/app.js'></script>
+
+<script src="../assets/js/app.js"></script>
 </body>
 </html>
